@@ -1,0 +1,705 @@
+<html>
+<head>
+<title>Práctica_8</title>
+</head>
+<body  topmargin="0" marginheight="0" bgcolor="Cyan">
+<H2>Interfases</H2>
+<H3>Objetivo</H3>
+<P>El alumno implementará paquetes para la generación de applet en java.Comprenderá la utilidad de la instrucción pakage en la organización de programas orientados a objetos.</P>
+<H3>Introducción Teórica</H3>
+<P>Para crear una bibliotecas de clases de Java (paquete), es necesario la instrucción package al comienzo del archivo fuente, incluso antes que las instrucciones import. La instrucción package indica la ubicación del paquete de archivos (biblioteca) en el disco duro.</P>
+<P>La instrucción package indica  a Java que usted colocará los archivos en un subdirectorio. Más adelante, cuando un programa tenga que utilizar una de las clases que define el paquete, o más, lo hará mediante instrucciones import.</P>
+<P>Si el nombre indicado en la instrucción package incluye dos partes, o más, separadas por puntos, el nombre del paquete especifica niveles de subdiarectorio.</P>
+<P>La estructura generalizada de un paquete será entonces:</P>
+
+package NombreDelPaquete.SudirectorioDelPaquete;<BR>
+import java.awt.*;<BR>
+public class NombreDeLaClase<BR>
+{<BR>
+....<BR>
+}<BR>
+<BR>
+<H3>Desarrollo</H3>
+<P> Para usar archivos de imagenes en un applet, primero es necesario declarar un objeto Image(imagen). Para asociar un archivo gráfico con un objeto imagen, los applets emplean la función getImagen (ObtenImagen). Para desplegar un objeto imagen, debe usar la función drawImage (dibuja imagen) de la clase Graphics. Por ejemplo:</P>
+
+Imagen= getImage(getCodeBase(), "ArchivoDeLaImagen.GIF");<BR><BR>
+g.drawImage(Image, x, y, ancho, alto, this);<BR><BR>
+
+<P>Para mejorar la aparencia con que se exhibe una imagen muchos applets usan la técnica del doble búfer: primero la cargan en la memoria de la computadora y luego la muestran en la ventana del applet. </P>
+
+<P>Implemente un paquete cuya función sea desplegar 5 imagenes para filigrana, 5 imagenes para botones y 5 imagenes para líneas de separación, empleando la técnica de doble búfer</P>
+
+<P>Para poner sonido en un applet es necesario declarar primero un objeto AudioClip, que está definida dentro de la biblioteca de clase java.applet.AudioClip. La función getAudioClip sirve para asignar sonido a un objeto AudioClip. Casi todos los compiladores actuales de Java dan soporte a los formatos AU y WAV, así como a archivos MIDI. Para reproducir una vez un archivo de sonido, los applets deben llamar al método play (tocar) de la clase AudioClip. Para reproducir continuamente un sonido, los applets deben llamar al método loop (ciclo) de la clase AudioClip. Por ejemplo:</P>
+
+AudioClip sonido=getAudioClip(getCodeBase(),<BR>
+"NombreDelArchivodeSonido.AU");<BR>
+<BR>
+audio.play();<BR>
+<BR>
+audio.loop();<BR>
+<BR>
+<P>Desarrolle un paquete para generar clases que poduscan 5 sonidos diferentes</P>
+
+<P>Vamos a desarrolllar un nuevo Componente para el AWT, para mejorar el Label que se proporciona con el AWT, añadiéndole al original cosas como bordes, efectos de sombreado, etc., o posibilidad de fijarle características como el color o el font de caracteres con que se presentará en pantalla. El siguiente listado nos lo permitirá:</P>
+
+1. import java.awt.*;<BR><BR>
+
+2. public class Etiqueta extends Panel {<BR>
+3.    private String texto = "";<BR>
+4.    private Font font = null;<BR>
+5.  private FontMetrics metrica = null;<BR>
+6.    private Color color = Color.black;<BR>
+7.    private int ancho = 0;<BR>
+8.    private int alto = 0;<BR>
+9.    private int sombra = 0;<BR>
+10.    private boolean borde = false;<BR><BR>
+   
+11.    public static final int TextoNormal = 0;<BR>
+12.    public static final int TextoResaltado = 1;<BR>
+13.    public static final int TextoHundido = 2;<BR><BR>
+      
+14.    public Etiqueta() {<BR> 
+15.        this( "" ); <BR>
+16.        }<BR><BR>
+   
+
+17.    public Etiqueta( String Texto ) { <BR>
+18.        setText( Texto ); <BR>
+19.        }<BR><BR>
+   
+
+20.    public Etiqueta( Etiqueta plantilla ) { <BR>
+21.        copiaPlantilla( plantilla ); <BR>
+22.        }<BR><BR>
+   
+
+23.    public Etiqueta( String Texto,Etiqueta plantilla ) {<BR>
+24.        copiaPlantilla( plantilla );<BR>
+25.        setText( Texto );<BR>
+26.        }<BR><BR>
+   
+
+27.    public void copiaPlantilla( Etiqueta plantilla ) {<BR>
+28.        texto = plantilla.texto;<BR>
+29.        font = plantilla.font;<BR>
+30.        metrica = plantilla.metrica;<BR>
+31.        color = plantilla.color;<BR>
+32.        ancho = plantilla.ancho;<BR>
+33.        sombra = plantilla.sombra;<BR>
+34.        borde = plantilla.borde;<BR>
+35.        }<BR><BR>
+   
+
+36.    public void checkFont() {<BR>
+37.        if( font == null ) <BR>
+38.            font = new Font( "Helvetica",Font.PLAIN,12 );<BR>
+39.        }<BR><BR>
+
+
+40.    public void setText( String Texto ) { <BR>
+41.        checkFont();<BR>
+42.        texto = Texto;<BR>
+43.        repaint();<BR>
+44.        }<BR><BR>
+   
+
+45.    public void setFont( String nombre,int estilo,int tam ) {<BR>
+46.        font = new Font( nombre,estilo,tam );  <BR>
+47.        }<BR><BR>
+   
+
+48.    public void setAncho( int Ancho ) { <BR>
+49.        ancho = Ancho; <BR>
+50.        }<BR><BR>
+
+
+51.    public void setAlto( int Alto ) { <BR>
+52.        alto = Alto; <BR>
+53.        }<BR><BR>
+
+
+54.    public void setColor( Color cColor ) { <BR>
+55.        color = cColor; <BR>
+56.        }<BR><BR>
+   
+
+57.    public void setSombra( int Sombra ) { <BR>
+58.        sombra = Sombra; <BR>
+59.        }<BR>
+
+
+60.    public void setBorde( boolean Borde ) { <BR>
+61.        borde = Borde; <BR>
+62.        } <BR>
+   
+
+63.    public String getText() { <BR>
+64.        return( texto ); <BR>
+65.        } <BR><BR>
+
+66.    public Font getFont() { <BR>
+67.        return( font ); <BR>
+68.        }<BR><BR>
+
+69.    public int getAncho() { <BR>
+70.        return( ancho ); <BR>
+71.        }<BR><BR>
+
+72.    public Color getColor() { <BR>
+73.        return( color ); <BR>
+74.        }<BR>
+<BR>
+75.    public int getSombra() { <BR>
+76.        return( sombra ); <BR>
+77.        }<BR>
+<BR>
+78.    public boolean getBorde() { <BR>
+79.        return( borde ); <BR>
+80.        }<BR><BR>
+   
+
+81.    public void paint( Graphics g ) { <BR>
+82.        update( g ); <BR>
+83.        }<BR>
+   <BR>
+
+84.    public void update( Graphics g ) {<BR>
+85.       Color color = g.getColor();<BR>      
+86.       g.clearRect( 0,0,bounds().width,bounds().height );<BR>
+87.       if( borde )<BR>
+88.           {<BR>
+89.           g.setColor( Color.lightGray );<BR>
+90.           g.draw3DRect( 0,0,bounds().width-1,bounds().height-1,false );<BR>
+91.           }<BR>
+92.       drawText( g );<BR>
+93.       g.setColor( color );<BR>
+94.       }<BR>
+<BR>
+
+95.    private void drawText( Graphics g ) {   <BR>
+96.        if( texto == null ) <BR>
+97.            return;<BR>
+      <BR>
+98.        char caracteres[] = texto.toCharArray();<BR>
+99.        int Longitud = texto.length();<BR>
+100.        Color colorant = g.getColor();<BR>
+      <BR>
+101.        g.setFont( font );<BR>
+102.        FontMetrics metrica = getFontMetrics( font );<BR>
+103.        int stringWidth = metrica.charsWidth( caracteres,0,Longitud );<BR>
+
+104.        if( sombra == TextoResaltado )<BR>
+105.            {<BR>
+106.            g.setColor( Color.white );<BR>
+107.            g.drawChars( caracteres,0,Longitud,1,metrica.getHeight()-<BR>3 );<BR>
+108.            }<BR>
+109.        else if( sombra == TextoHundido )<BR>
+110.            {<BR>
+111.            g.setColor( Color.white );<BR>
+112.            g.drawChars( caracteres,0,Longitud,3,metrica.getHeight()-1 );<BR>
+113.            }
+114.        g.setColor( color );      <BR>
+115.        g.drawChars( caracteres,0,Longitud,2,metrica.getHeight()-2 );<BR>
+116.        g.setColor( colorant );<BR>
+117.        }<BR>
+   
+<BR>
+118.    public Dimension minimumSize() {  <BR>
+119.        if( alto == 0 )<BR>
+120.            {<BR>
+121.            if( font != null )<BR>
+122.                alto = font.getSize();<BR>
+123.            else<BR>
+124.                alto = 12;<BR>
+125.            }<BR>
+126.        if( ancho == 0 ) <BR>
+127.            ancho = 100;<BR>
+<BR>
+128.        return( new Dimension( ancho+3,alto+3 ) );<BR>
+129.        }<BR>
+130.   <BR>
+131.    public Dimension preferredSize() { <BR>
+132.        return( minimumSize() ); <BR>
+133.        }<BR>
+
+134.    public Insets insets() { <BR>
+135.        return( new Insets( 3,3,3,3 ) ); <BR>
+136.        }<BR>   
+137.    }<BR>
+<BR>
+<P>Implemete el anterior applet como un paquete y dibuje su diagrama de Flujo</P>
+<P>Compile y depure y esplique el funcionamiento de los siguientes programas, para generar "Solapas".</P>
+
+1.import java.awt.*;<BR><BR>
+
+2.public class CuerpoFicha extends Panel {<BR>
+<BR>
+3.    public CuerpoFicha( Color colorCuerpo ) {<BR>
+4.        setBackground( colorCuerpo );<BR>
+5.        }<BR>
+<BR>
+6.    public void paint( Graphics g ) {<BR>
+7.        Rectangle area;<BR>
+<BR>
+8.        area = bounds();<BR>
+<BR>
+9.                g.setColor( getBackground() );<BR>
+10.        g.fillRect( area.x,area.y + 1,area.width,area.height-1 );<BR>
+ <BR>
+11.                g.setColor( Color.white );<BR>
+12.        g.drawLine( area.x,area.y,area.x+area.width,area.y );<BR>
+13.        g.drawLine( area.x,area.y,area.x,area.y+area.height );<BR>
+<BR>
+14.                g.setColor( Color.gray );<BR>
+15.        g.drawLine( area.x,area.y+area.height-1,<BR>
+16.            area.x+area.width-1,area.y+area.height-1 );<BR>
+17.        g.drawLine( area.x+area.width-1,area.y+area.height-1,<BR>
+18.            area.x+area.width-1,area.y+1 );<BR>
+<BR>
+19.                g.setColor( Color.black );<BR>
+20.        g.drawLine( area.x,area.y+area.height,<BR>
+21.            area.x+area.width,area.y+area.height );<BR>
+22.        g.drawLine( area.x+area.width,area.y+area.height,<BR>
+23.            area.x+area.width,area.y+1 );<BR>
+24.        }<BR>
+25.    }<BR>
+<BR>
+<BR>
+1.import java.awt.*;<BR><BR>
+
+2.public class Solapa extends Canvas {<BR>
+3.    protected String rotulo;<BR>
+4.    protected Font seleFont;<BR>
+5.    protected Font normFont;<BR>
+6.    protected boolean seleccionada;<BR>
+<BR>
+7.    public Solapa( String rotulo,Font normFont,<BR>
+8.        Font seleFont,Color captionColor,Color bgColor ) {<BR>
+9.        super();<BR>
+10.        this.rotulo = rotulo;<BR>
+11.        this.normFont = normFont;<BR>
+12.        this.seleFont = seleFont;<BR>
+13.        setForeground( captionColor );<BR>
+14.        setBackground( bgColor );<BR>
+15.        seleccionada = false;<BR>
+16.        }<BR>
+<BR>
+<BR>
+17.    public void pintaRotulo( Graphics g ) {<BR>
+18.        int rotuloX;<BR>
+19.        int rotuloY;<BR>
+20.        FontMetrics fm;<BR>
+<BR>
+21.        if( seleccionada ) <BR>
+22.            {<BR>
+23.            g.setFont( seleFont );<BR>
+24.            fm = g.getFontMetrics( seleFont );<BR>
+25.            } <BR>
+26.        else <BR>
+27.            {<BR>
+28.            g.setFont( normFont );<BR>
+29.            fm = g.getFontMetrics( normFont );<BR>
+30.            }<BR>
+<BR>
+31.        rotuloX = <BR>
+32.            bounds().x +( (bounds().width - fm.stringWidth<BR>58.(rotulo) ) / 2);<BR>
+33.        rotuloY = bounds().y + ( bounds().height / 2 ) - <BR>
+34.            fm.getDescent() + ( fm.getHeight() / 2 );<BR>
+<BR>
+35.        g.setColor( getForeground() );<BR>
+36.        g.drawString( rotulo,rotuloX,rotuloY );<BR>
+37.        }<BR>
+<BR>
+<BR>
+38.    public void pintaSolapa( Graphics g ) {<BR>
+39.        int delante;<BR>
+40.        Rectangle area;<BR>
+<BR>
+41.        delante = ( seleccionada ) ? 2 : 0;<BR>
+42.        area = bounds();<BR>
+43.        g.setColor( getBackground() );<BR>
+<BR>
+44.        if ( !seleccionada ) <BR>
+45.            {<BR>
+46.            g.fillRect( area.x,area.y+2, area.width,area.height-2 );<BR>
+47.            g.drawLine( area.x+1,area.y+1,area.width+area.x-<BR>74.2,area.y+1 );<BR>
+48.            } <BR>
+49.        else <BR>
+50.            {<BR>
+51.            g.fillRect( area.x-1,area.y,area.width+2,area.height );<BR>
+52.            g.drawLine( area.x,area.y-1,area.x+area.width,area.y-1 );<BR>
+53.            }<BR>
+<BR>
+54.        g.setColor( Color.white );<BR>
+55.        g.drawLine( area.x-delante,area.y+area.height-2,<BR>
+56.            area.x-delante,area.y+2-delante );<BR>
+57.        g.drawLine( area.x-delante,area.y+2-delante,<BR>
+58.            area.x+2-delante,area.y-delante );<BR>
+59.        g.drawLine( area.x+2-delante,area.y-delante,<BR>
+60.            area.x+area.width-2+delante,area.y-delante );<BR>
+<BR>
+61.        if( !seleccionada ) <BR>
+62.            {<br>
+63.            g.setColor( Color.gray );<BR>
+64.            g.drawLine( area.x+area.width-1,area.y,<BR>
+65.                area.x+area.width-1,area.y+area.height-2 );<BR>
+<BR>
+66.            g.setColor( Color.black );<BR>
+67.            g.drawLine( area.x+area.width,area.y+2,<BR>
+68.                area.x+area.width,area.y+area.height-2 );<BR>
+69.            } <BR>
+70.        else <BR>
+71.            {<BR>
+72.            g.setColor( Color.gray );<BR>
+73.            g.drawLine( area.x+area.width-1+delante,area.y-delante,<BR>
+74.                area.x+area.width-1+delante,area.y+area.height-2 );<BR>
+<BR>
+75.            g.setColor( Color.black );<BR>
+76.            g.drawLine( area.x+area.width+delante,area.y+2-delante,<BR>
+77.                area.x + area.width+delante,area.y + area.height-2 );<BR>
+<BR>
+78.            g.setColor( getBackground() );<BR>
+79.            g.drawLine( area.x-delante+1,area.y+area.height,<BR>
+80.                area.x+area.width,area.y+area.height );<BR>
+81.            }<BR>
+82.        }<BR>
+<BR>
+<BR>
+83.    public String getRotulo() {<BR>
+84.        return( rotulo ); <BR>
+85.        }<BR>
+<BR>
+<BR>
+86.    public Point getFinal() {<BR>
+87.        return( new Point(bounds().x+bounds().width+2,bounds().y ) );<BR>
+88.        }<BR>
+<BR>
+<BR>
+89.    public int getAlto() {<BR>
+90.        return( size().height );<BR>
+91.        }<BR>
+<BR>
+<BR>
+92.    public Font getFuenteSel() {<BR>
+93.        return( seleFont );<BR>
+94.        }<BR>
+<BR>
+<BR>
+95.    public boolean estaDentro( int x,int y ) {<BR>
+96.        return( bounds().inside( x,y ) );<BR>
+97.        }<BR>
+<BR>
+<BR>
+98.    public boolean estaSeleccionada() {<BR>
+99.        return( seleccionada );<BR>
+100.        }<BR>
+<BR>
+<BR>
+101.    public boolean mouseDown( Event evt,int x,int y ) {<BR>
+102.        if( ( estaDentro( x,y ) ) && ( !estaSeleccionada() ) )<BR>
+103.            return( true );<BR>
+104.        else <BR>
+105.            return( false );<BR>
+106.        }<BR>
+<BR>
+<BR>
+107.    public void paint( Graphics g ) {<BR>
+108.        pintaSolapa( g );<BR>
+109.        pintaRotulo( g );<BR>
+110.        }<BR>
+<BR>
+<BR>
+111.    public void seleccionar() {<BR>
+112.        seleccionada = true;<BR>
+113.        }<BR>
+<BR>
+<BR>
+114.    public void deSeleccionar() {<BR>
+115.        seleccionada = false;<BR>
+116.       }<BR>
+117.    }<BR>
+<BR>
+<BR>
+1.import java.awt.*;<BR>
+2.import java.lang.String;<BR>
+3.import CuerpoFicha;<BR>
+4.import Solapa;<BR>
+<BR>
+5.public class Ficha extends Panel {<BR>
+6.    public static final int SOLAPA_SELECCIONADA = 2000;<BR>
+7.    protected Solapa solapa;<BR>
+8.    protected CuerpoFicha cuerpoFicha;<BR>
+<BR>
+9.    public Ficha( String rotulo,Font normFont,Font seleFont,<BR>
+10.        Color colorRotulo,Color colorFicha ) {<BR>
+11.        super();<BR>
+12.        solapa = new Solapa( rotulo,normFont,seleFont, <BR>
+13.            colorRotulo,colorFicha );<BR>
+14.        cuerpoFicha = new CuerpoFicha( colorFicha );<BR>
+15.        }<BR>
+<BR>
+<BR>
+16.    public String getRotulo() {<BR>
+17.        return( solapa.getRotulo() );<BR>
+18.        }<BR>
+<BR>
+<BR>
+19.    public Rectangle getBordesFicha() {<BR>
+20.        return( cuerpoFicha.bounds() );<BR>
+21.        }<BR>
+<BR>
+<BR>
+22.    public Rectangle getBordesSolapa() {<BR>
+23.        return( solapa.bounds() );<BR>
+24.        }<BR>
+<BR>
+<BR>
+25.    public Point getFinalSolapa() {<BR>
+26.        return( solapa.getFinal() );<BR>
+27.        }<BR>
+<BR>
+<BR>
+28.    public boolean handleEvent( Event evt ) {<BR>
+29.        if( solapa.handleEvent( evt ) ) <BR>
+30.            {<BR>
+31.            evt.id = SOLAPA_SELECCIONADA;<BR>
+32.            evt.arg = this;<BR>
+33.            }<BR>
+34.        return( false );<BR>
+35.        }<BR>
+<BR>
+<BR>
+36.    public boolean estaSeleccionada() {<BR>
+37.        return( solapa.estaSeleccionada() );<BR>
+38.        }<BR>
+<BR>
+<BR>
+39.    public void medidas( Point solapaXY,Graphics g,<BR>
+40.        Dimension appTam,Point appPos ) {<BR>
+41.        FontMetrics fm;<BR>
+42.        int anchoRotulo;<BR>
+43.        int altoRotulo;<BR>
+<BR>
+44.        fm = g.getFontMetrics( solapa.getFuenteSel() );<BR>
+45.        anchoRotulo = fm.stringWidth( solapa.getRotulo() );<BR>
+46.        altoRotulo = fm.getHeight();<BR>
+47.        solapa.reshape( solapaXY.x,solapaXY.y,anchoRotulo+altoRotulo,<BR>
+48.            altoRotulo+(altoRotulo / 3) );<BR>
+49.        cuerpoFicha.reshape( appPos.x,appPos.y+solapa.getAlto(),<BR>
+50.            appTam.width-1,appTam.height-solapa.getAlto()-1 );<BR>
+51.        }<BR>
+<BR>
+<BR>
+52.    public void paint( Graphics g ) {<BR>
+53.        if( estaSeleccionada() ) <BR>
+54.            cuerpoFicha.paint( g );<BR>
+55.        solapa.paint( g );<BR>
+56        }<BR>
+<BR>
+<BR>
+57.    public void seleccionar() {<BR>
+58.        solapa.seleccionar();<BR>
+59.        }<BR>
+<BR>
+<BR>
+60.    public void deSeleccionar() {<BR>
+61.        solapa.deSeleccionar();<BR>
+62.        }<BR>
+63.    }<BR>
+<BR>
+<BR>
+1.import java.awt.*;<BR>
+2.import java.util.Vector;<BR>
+3.import Ficha;<BR>
+<BR>
+4.public class ListaFichas extends Panel {<BR>
+5.    protected Vector fichas;<BR>
+6.    protected Point posicion;<BR>
+7.    protected Dimension tama;<BR>
+8.    protected Font normFont;<BR>
+9.    protected Font seleFont;<BR>
+10.    protected Color fgColor;<BR>
+11.    protected Color bgColor;<BR>
+12.    protected Panel contenido;<BR>
+<BR>
+13.    public ListaFichas( Point posicion,Dimension tama,Font normFont,<BR>
+14.        Font seleFont,Color fgColor,Color bgColor,<BR>
+15.        String primerRotulo,Panel primerPanel ) {<BR>
+<BR>
+16.        super();<BR>
+       <BR>
+17.        setLayout( null );      <BR>
+<BR>
+18.        fichas = new Vector();<BR>
+19.        this.posicion = posicion;<BR>
+20.        this.tama = tama;<BR>
+21.        this.normFont = normFont;<BR>
+22.        this.seleFont = seleFont;<BR>
+23.        this.fgColor = fgColor;<BR>
+24.        this.bgColor = bgColor;<BR>
+25.        contenido = new Panel();<BR>
+26.        add( contenido );<BR>
+27.        contenido.setLayout( new CardLayout() );<BR>
+<BR>
+28.        addFicha( primerRotulo,primerPanel );<BR>
+29.        primeraFicha().seleccionar();<BR>
+30.        }<BR>
+<BR>
+<BR>
+31.    public synchronized void addFicha( String rotulo,Panel panel ) {<BR>
+32.        fichas.addElement( new Ficha( rotulo,normFont,seleFont, <BR>
+33.            fgColor,bgColor) );<BR>
+34.        contenido.add( rotulo,panel );<BR>
+35.        }<BR>
+<BR>
+<BR>
+36.    public synchronized void addFicha( Color fgColor,Color bgColor,<BR>
+37.        String rotulo,Panel panel ) {<BR>
+38.        fichas.addElement( new Ficha( rotulo,normFont,seleFont, <BR>
+39.            fgColor,bgColor ) );<BR>
+40.        contenido.add( rotulo,panel );<BR>
+41.        }<BR>
+<BR>
+<BR>
+42.    public void presentaFichaSeleccionada() {<BR>
+43.        ( (CardLayout)contenido.getLayout() ).show( contenido,<BR>
+44.            ( getSeleccionada().getRotulo() ) );<BR>
+45.        }<BR>
+<BR>
+<BR>
+46.    public synchronized Ficha primeraFicha() {<BR>
+47.        return( (Ficha)fichas.firstElement() );<BR>
+48.        }<BR>
+<BR>
+<BR>
+49.    public Panel getContenido() {<BR>
+50.        return contenido;<BR>
+51.        }<BR>
+<BR>
+<BR>
+52.    public synchronized Ficha getSigFicha( Ficha f ) {<BR>
+53.        Ficha nextF;<BR>
+<BR>
+54.        if( fichas.indexOf( f ) < (fichas.size() - 1) ) <BR>
+55.            nextF = fichaAt( fichas.indexOf(f)+1 );<BR>
+56.        else <BR>
+57.            nextF = null;<BR>
+        <BR>
+58.        return( nextF );<BR>
+59.        }<BR>
+<BR>
+<BR>
+60.    public synchronized Ficha getSeleccionada() {<BR>
+61.        Ficha f;<BR>
+<BR>
+62.        f = primeraFicha();<BR>
+63.        while( (!f.estaSeleccionada()) && (f != null) ) <BR>
+64.            f = getSigFicha( f );<BR>
+    <BR>
+65.        return( f );<BR>
+66.        }<BR>
+<BR>
+<BR>
+67.    public boolean handleEvent( Event evt ) {<BR>
+68.        boolean manejado;<BR>
+69.        Ficha  f;<BR>
+<BR>
+70.        f = primeraFicha();<BR>
+71.        manejado = f.handleEvent( evt );<BR>
+72.        if( !manejado ) <BR>
+73.            f = getSigFicha( f );<BR>
+74.        while( (f != null) && (!manejado) ) <BR>
+75.            {<BR>
+76.            manejado = f.handleEvent( evt );<BR>
+77.            f = getSigFicha( f );<BR>
+78.            }<BR>
+<BR>
+79.        if( evt.id == Ficha.SOLAPA_SELECCIONADA ) <BR>
+80.            {<BR>
+81.            getSeleccionada().deSeleccionar();<BR>
+82.            ( (Ficha)evt.arg ).seleccionar();<BR>
+83.            presentaFichaSeleccionada();<BR>
+84.            repaint();<BR>
+85.            manejado = true;<BR>
+86.            }<BR>
+<BR>
+87.        if( !manejado ) <BR>
+88.            manejado = contenido.handleEvent( evt );<BR>
+<BR>
+89.        return( manejado );<BR>
+90.        }<BR>
+<BR>
+<BR>
+91.    public synchronized Ficha ultimaFicha() {<BR>
+92.        return( (Ficha)fichas.lastElement() );<BR>
+93.        }<BR>
+<BR>
+<BR>
+94.    public void medidas( Graphics g ) {<BR>
+95.        Ficha f;<BR>
+96.        Point solapaXY;<BR>
+<BR>
+97.        tama = size();<BR>
+98.        f = primeraFicha();<BR>
+99.        solapaXY = new Point( posicion.x+2,posicion.y+2 );<BR>
+100.        f.medidas( solapaXY,g,tama,posicion );<BR>
+101.        if( f != ultimaFicha() ) <BR>
+102.            {<BR>
+103.            do {<BR>
+104.                solapaXY = f.getFinalSolapa();<BR>
+105.                f = getSigFicha( f );<BR>
+106.                f.medidas( solapaXY,g,tama,posicion );<BR>
+107.               } while( f != ultimaFicha() );<BR>
+108.            }<BR>
+<BR>
+109.        Rectangle r = primeraFicha().getBordesSolapa();<BR>
+110.        contenido.move( r.x+3,r.y+r.height+3 );<BR>
+111.        r = primeraFicha().getBordesFicha();<BR>
+112.        contenido.resize( r.width-10,r.height-10 );<BR>
+113.        }<BR>
+<BR>
+<BR>
+114.    public void paint( Graphics g ) {<BR>
+115.        Ficha f;<BR>
+<BR>
+116.        medidas( g );<BR>
+117.        f = primeraFicha();<BR>
+118.        while( f != null ) <BR>
+119.            {<BR>
+120.            if( !f.estaSeleccionada() ) <BR>
+121.                f.paint( g );<BR>
+122.            f = getSigFicha( f );<BR>
+123.            }<BR>
+124.        getSeleccionada().paint( g );<BR>
+125.        contenido.paintAll( g );<BR>
+126.        }<BR>
+<BR>
+<BR>
+127.    public synchronized Ficha fichaAt( int indice ) {<BR>
+128.        Ficha f;<BR>
+<BR>
+129.        try {<BR>
+130.            f = (Ficha)fichas.elementAt( indice );<BR>
+131.        } catch( ArrayIndexOutOfBoundsException e ) {<BR>
+132.            System.out.println("Error : No hay ficha #" + indice );<BR>
+133.            return( null );<BR>
+134.            }<BR>
+135.        return( f );<BR>
+136.        }<BR>
+137.    }<BR>
+<BR>
+<BR>
+<P>Realice los cambios necesarios a los anteriores programas, de tal
+ manera que por cada solapa se pueda accesar a los diferentes paquetes desarrollados en esta práctica. Agrege una solapa (programa en Java)que permita accesar a un ayuda que se despliegue como una marquesina ascendente.</P>
+<TABLE WIDTH=605 HEIGHT=80>
+<TR>
+<TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="unidad_IV.HTML"><IMG SRC="regresar.JPG" WIDTH=35 HEIGTH=30><BR>regresar</A></TD>
+<TD WIDTH=80></TD>
+<TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="contenido.HTML"><IMG SRC="salir.JPG" WIDTH=35 HEIGTH=30><BR>salir</A></TD>
+<TD WIDTH=80></TD>
+<TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="Practica_8.HTML"><IMG SRC="continuar.JPG" WIDTH=35 HEIGTH=30><BR>continuar</A></TD>
+</TR>
+</TABLE>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>poopr4</TITLE>
+<META NAME="Título" CONTENT=" ">
+<META NAME="Template" CONTENT="D:\Archivos de programa\Microsoft Office\Plantillas\Páginas Web\Asistente para páginas Web.wiz">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" BACKGROUND="Image17.gif">
+<DIR>
+
+<B><FONT SIZE=7><P>Pr&aacute;ctica IV </P>
+</FONT><FONT SIZE=6 COLOR="#0000ff"><P>(Operadores y clases de los tipos de datos)</P>
+</FONT><FONT SIZE=4 COLOR="#0000ff"><P>OBJETIVO:</B></FONT><FONT SIZE=4> </FONT>El alumno comprender&aacute; y utilizar&aacute; correctamente las clases empleadas para cada uno de los tipos de datos en Java, as&iacute; como los operadores que el este lenguaje emplea para realizar operaciones de nivel de bits, num&eacute;ricas, relacionales etc. en programas (aplicaciones o Applets) que resuelvan alg&uacute;n tipo de problema, ya sea que utilicen o no un algoritmo. </P>
+<P>&nbsp;</P>
+<B><FONT SIZE=5 COLOR="#0000ff"><P>INTRODUCCCION.</P></DIR>
+
+</B></FONT><FONT COLOR="#0000ff"><H3>Operadores</H3>
+</FONT><P>Los operadores de Java son muy parecidos en estilo y funcionamiento a los de C. En la siguiente tabla aparecen los operadores que se utilizan en Java, por orden de precedencia: </P>
+<PRE>    .       []      ()
+    ++      --
+    !       ~       instanceof
+    *       /       %
+    +       -
+    &lt;&lt;      &gt;&gt;      &gt;&gt;&gt;
+    &lt;       &gt;       &lt;=       &gt;=       ==       !=
+    &amp;       ^       |
+    &amp;&amp;      ||
+    ?  :
+    =       op=     (*=     /=      %=      +=      -=      etc.)    ,</PRE>
+<P>Los operadores num&eacute;ricos se comportan como esperamos:</P>
+<PRE>int + int = int, long + long = long, float + float = float, double + double = double.
+int - int = int, long - long = long, float - float = float, double - double = double.
+Int * int = int, long * long = long, float * float = float, double * double = double.
+int / int = int, long / long = long, float / float = float, double / double = double.</PRE>
+<P>&nbsp;</P>
+<P>Para realizar operaciones aritm&eacute;ticas con asignaci&oacute;n utilizamos +=, -=, *=, /=, %=.</P>
+<P>Los operadores relacionales devuelven un valor booleano.</P>
+<P>Para las cadenas, se pueden utilizar los operadores relacionales para comparaciones adem&aacute;s de + y += para la concatenaci&oacute;n:</P>
+<PRE>    String nombre = "nombre" + "Apellido";</PRE>
+<P>El operador de igualdad (=) siempre hace copias de objetos, marcando los antiguos para borrarlos, y ya se encargar&aacute; el Recolector de basura de devolver al sistema la memoria ocupada por el objeto eliminado.</P>
+<P>Algunos de los principales problemas para utilizar los operadores con un flujo de datos proveniente del teclado es que Java da una importancia mayor a los datos de tipo String, claro esta que un String es una clase, por lo tanto es m&aacute;s f&aacute;cil introducir por teclado datos en formato de cadenas, m&aacute;s sin embargo Java soluciona el problema utilizando CLASES para los tipos de datos y por medio de estas se realizan conversiones entre tipos de datos y entre tipos de objetos. Dichas clases se muestran a continuaci&oacute;n:</P>
+<FONT COLOR="#0000ff"><H2>LA CLASE Character</H2>
+</FONT><P>Al trabajar con caracteres se hace necesario utilizar funciones de comprobaci&oacute;n y traslaci&oacute;n. Estas funciones est&aacute;n empleadas en la clase <B>Character</B>. De esta clase s&iacute; que se pueden crear instancias, al contrario que sucede con la clase <B>Math</B>.</P>
+<FONT COLOR="#0000ff"><H3>Declaraciones</H3>
+</FONT><P>La primera sentencia crear&aacute; una variable car&aacute;cter y la segunda un objeto Character:</P>
+<PRE>    char c;
+    Character C;</PRE>
+<FONT COLOR="#0000ff"><H3>Comprobaciones booleanas</H3>
+</FONT><PRE>    Character.isLowerCase( c )
+    Character.isUpperCase( c )
+    Character.isDigit( c )
+    Character.isSpace( c )</PRE>
+<P>En este caso, para un objeto Character <B>C</B>, no se podr&iacute;a hacer <I>C.isLowerCase</I>, porque no se ha hecho un <B>new</B> de Character. Estas funciones son est&aacute;ticas y no conocen al objeto, por eso hay que crearlo antes. </P>
+<FONT COLOR="#0000ff"><H3>Traslaciones de caracteres</H3>
+</FONT><PRE>    char c2 = Character.toLowerCase( c );
+    char c2 = Character.toUpperCase( c );</PRE>
+<FONT COLOR="#0000ff"><H3>Traslaciones de car&aacute;cter a d&iacute;gito</H3>
+</FONT><PRE>    int i = Character.digit( c,base );
+    char c = Character.forDigit( i,base );</PRE>
+<FONT COLOR="#0000ff"><H3>M&eacute;todos de la clase Character</H3>
+</FONT><PRE>    C = new Character( 'J' );
+    char c = C.charValue();
+    String s = C.toString();</PRE>
+<FONT COLOR="#0000ff"><H2>&nbsp;</H2>
+<H2>LA CLASE Float</H2>
+</FONT><P>Cada tipo num&eacute;rico tiene su propia clase de objetos. As&iacute; el tipo <I>float</I> tiene el objeto <I>Float</I>. De la misma forma que con la clase <B>Character</B>, se han codificado muchas funciones &uacute;tiles dentro de los m&eacute;todos de la clase <B>Float</B>.</P>
+<FONT COLOR="#0000ff"><H3>Declaraciones</H3>
+</FONT><P>La primera sentencia crear&aacute; una variable float y la segunda un objeto Float:</P>
+<PRE>    float f;
+    Float F;</PRE>
+<FONT COLOR="#0000ff"><H3>Valores de Float</H3>
+</FONT><PRE>    Float.POSITIVE_INFINITY
+    Float.NEGATIVE_INFINITY
+    Float.NaN
+    Float.MAX_VALUE
+    Float.MIN_VALUE</PRE>
+<FONT COLOR="#0000ff"><H3>Conversiones de Clase/Cadena</H3>
+</FONT><PRE>    String s = Float.toString( f );
+    f = Float.valueOf( "3.14" );</PRE>
+<FONT COLOR="#0000ff"><H3>Comprobaciones</H3>
+</FONT><PRE>    boolean b = Float.isNaN( f );
+    boolean b = Float.isInfinite( f );</PRE>
+<P>La funci&oacute;n <I>isNaN()</I> comprueba si <CODE>f</CODE> es un <I>No-N&uacute;mero</I>. Un ejemplo de no-n&uacute;mero es raiz cuadrada de -2.</P>
+<FONT COLOR="#0000ff"><H3>Conversiones de Objetos</H3>
+</FONT><PRE>    Float F = new Float( Float.PI );
+    String s = F.toString();
+    int i = F.intValue();
+    long l = F.longValue();
+    float F = F.floatValue();
+    double d = F.doubleValue();</PRE>
+<FONT COLOR="#0000ff"><H3>Otros M&eacute;todos</H3>
+</FONT><PRE>    int i = F.hashCode();
+    boolean b = F.equals( Object obj );
+    int i = Float.floatToIntBits( f );
+    float f = Float.intBitsToFloat( i );</PRE>
+<P>&nbsp;</P>
+<FONT COLOR="#0000ff"><H2>LA CLASE Double</H2>
+</FONT><P>Cada tipo num&eacute;rico tiene su propia clase de objetos. As&iacute; el tipo <I>double</I> tiene el objeto <I>Double</I>. De la misma forma que con la clase <B>Character</B>, se han codificado muchas funciones &uacute;tiles dentro de los m&eacute;todos de la clase <B>Double</B>.</P>
+<FONT COLOR="#0000ff"><H3>Declaraciones</H3>
+</FONT><P>La primera sentencia crear&aacute; una variable double y la segunda un objeto Double:</P>
+<PRE>    double d;
+    Double D;</PRE>
+<FONT COLOR="#0000ff"><H3>Valores de Double</H3>
+</FONT><PRE>    Double.POSITIVE_INFINITY
+    Double.NEGATIVE_INFINITY
+    Double.NaN
+    Double.MAX_VALUE
+    Double.MIN_VALUE</PRE>
+<FONT COLOR="#0000ff"><H3>M&eacute;todos de Double</H3>
+</FONT><PRE>    D.isNaN();
+    Double.isNaN( d );
+    D.isInfinite();
+    Double.isInfinite( d );
+    boolean D.equals();
+    String D.toString();
+    int D.intValue();
+    long D.longValue();
+    float D.floatValue();
+    double D.doubleValue();
+    int i = D.hashCode();
+    Double V.valueOf( String s );
+    long l = Double.doubleToLongBits( d );
+    double d = Double.longBitsToDouble( l );</PRE>
+<P>&nbsp;</P>
+<FONT COLOR="#0000ff"><H2>LA CLASE Integer</H2>
+</FONT><P>Cada tipo num&eacute;rico tiene su propia clase de objetos. As&iacute; el tipo <I>int</I> tiene el objeto <I>Integer</I>. De la misma forma que con la clase <B>Character</B>, se han codificado muchas funciones &uacute;tiles dentro de los m&eacute;todos de la clase <B>Integer</B>.</P>
+<FONT COLOR="#0000ff"><H3>Declaraciones</H3>
+</FONT><P>La primera sentencia crear&aacute; una variable int y la segunda un objeto Integer:</P>
+<PRE>    int i;
+    Integer I;</PRE>
+<FONT COLOR="#0000ff"><H3>Valores de Integer</H3>
+</FONT><PRE>    Integer.MIN_VALUE;
+    Integer.MAX_VALUE;</PRE>
+<FONT COLOR="#0000ff"><H3>M&eacute;todos de Integer</H3>
+</FONT><PRE>    String Integer.toString( int i,int base );
+    String Integer.toString( int i );
+    int I.parseInt( String s,int base );
+    int I.parseInt( String s );
+    Integer Integer.valueOf( String s,int base );
+    Integer Integer.valueOf( String s );
+    int I.intValue();
+    long I.longValue();
+    float I.floatValue();
+    double I.doubleValue();
+    String I.toString();
+    int I.hashCode();
+    boolean I.equals( Object obj );</PRE>
+<P>En los m&eacute;todos <I>toString()</I>, <I>parseInt()</I> y <I>valueOf()</I> que no se especifica la <B>base</B> sobre la que se trabaja, se asume que es <B>base 10</B>.</P>
+<FONT COLOR="#0000ff"><H2>LA CLASE Long</H2>
+</FONT><P>Cada tipo num&eacute;rico tiene su propia clase de objetos. As&iacute; el tipo <I>long</I> tiene el objeto<I> Long</I>. De la misma forma que con la clase <B>Character</B>, se han codificado muchas funciones &uacute;tiles dentro de los m&eacute;todos de la clase <B>Long</B>.</P>
+<FONT COLOR="#0000ff"><H3>Declaraciones</H3>
+</FONT><P>La primera sentencia crear&aacute; una variable long y la segunda un objeto Long:</P>
+<PRE>    long l;
+    Long L;</PRE>
+<FONT COLOR="#0000ff"><H3>Valores de Long</H3>
+</FONT><PRE>    Long.MIN_VALUE;
+    Long.MAX_VALUE;</PRE>
+<FONT COLOR="#0000ff"><H3>M&eacute;todos de Long</H3>
+</FONT><PRE>    String Long.toString( long l,int base );
+    String Long.toString( long l );
+    long L.parseLong( String s,int base );
+    long L.parseLong( String s );
+    Long Long.valueOf( String s,int base );
+    Long Long.valueOf( String s );
+    int L.intValue();
+    long L.longValue();
+    float L.floatValue();
+    double L.doubleValue();
+    String L.toString();
+    int L.hashCode();
+    boolean L.equals( Object obj );</PRE>
+<P>En los m&eacute;todos <I>toString()</I>, <I>parseInt()</I> y <I>valueOf()</I> que no se especifica la <B>base</B> sobre la que se trabaja, se asume que es <B>base 10</B>.</P>
+<FONT COLOR="#0000ff"><H2>LA CLASE Boolean</H2>
+</FONT><P>Los valores <I>boolean</I> tambi&eacute;n tienen su tipo asociado <I>Boolean</I>, aunque en este caso hay menos m&eacute;todos implementados que para el resto de las clases num&eacute;ricas.</P>
+<FONT COLOR="#0000ff"><H3>Declaraciones</H3>
+</FONT><P>La primera sentencia crear&aacute; una variable boolean y la segunda un objeto Boolean:</P>
+<PRE>    boolean b;
+    Boolean B;</PRE>
+<FONT COLOR="#0000ff"><H3>Valores de Boolean</H3>
+</FONT><PRE>    Boolean.TRUE;
+    Boolean.FALSE;</PRE>
+<FONT COLOR="#0000ff"><H3>M&eacute;todos de Boolean</H3>
+</FONT><PRE>    boolean B.booleanValue();
+    String B.toString();
+    boolean B.equals( Object obj );</PRE>
+<P>&nbsp;</P>
+<FONT COLOR="#0000ff"><H2>LA CLASE String</H2>
+</FONT><P>Java posee gran capacidad para el manejo de cadenas dentro de sus clases <B>String</B> y <B>StringBuffer</B>. Un objeto <I>String</I> representa una cadena alfanum&eacute;rica de un valor constante que no puede ser cambiada despu&eacute;s de haber sido creada. Un objeto <I>StringBuffer</I> representa una cadena cuyo tama&ntilde;o puede variar.</P>
+<P>Los Strings son objetos constantes y por lo tanto muy baratos para el sistema. La mayor&iacute;a de las funciones relacionadas con cadenas esperan valores String como argumentos y devuelven valores String.</P>
+<P>Hay que tener en cuenta que las funciones est&aacute;ticas no consumen memoria del objeto, con lo cual es m&aacute;s conveniente usar Character que char. No obstante, char se usa, por ejemplo, para leer ficheros que est&aacute;n escritos desde otro lenguaje.</P>
+<P>Existen muchos constructores para crear nuevas cadenas:</P>
+<PRE>    String();
+    String( String str );
+    String( char val[] );
+    String( char val[],int offset,int count );
+    String( byte val[],int hibyte );
+    String( byte val[],int hibyte,int offset,int count );</PRE>
+<P>Tal como uno puede imaginarse, las cadenas pueden ser muy complejas, existiendo muchas funciones muy &uacute;tiles para trabajar con ellas y, afortunadamente, la mayor&iacute;a est&aacute;n codificadas en la clase <B>String</B>.</P>
+<FONT COLOR="#0000ff"><H3>Funciones B&aacute;sicas</H3>
+</FONT><P>La primera devuelve la longitud de la cadena y la segunda devuelve el car&aacute;cter que se encuentra en la posici&oacute;n que se indica en <CODE>indice</CODE>:</P>
+<PRE>    int length();
+    char charAt( int indice );</PRE>
+<FONT COLOR="#0000ff"><H4>Funciones de Comparaci&oacute;n de Strings</H4>
+</FONT><PRE>    boolean equals( Object obj );
+    boolean equalsIgnoreCase( Object obj );</PRE>
+<P>Lo mismo que <I>equals()</I> pero no tiene en cuenta may&uacute;sculas o min&uacute;sculas.</P>
+<PRE>    int compareTo( String str2 );</PRE>
+<P>Devuelve un entero menor que cero si la cadena es l&eacute;xicamente menor que <CODE>str2</CODE>. Devuelve cero si las dos cadenas son l&eacute;xicamente iguales y un entero mayor que cero si la cadena es l&eacute;xicamente mayor que <CODE>str2</CODE>.</P>
+<FONT COLOR="#0000ff"><H4>Funciones de Comparaci&oacute;n de Subcadenas</H4>
+</FONT><PRE>    boolean regionMatch( int thisoffset,String s2,int s2offset,int len );
+    boolean regionMatch( boolean ignoreCase,int thisoffset,String s2,
+    int s2offset,int 1 );</PRE>
+<P>Comprueba si una regi&oacute;n de esta cadena es igual a una regi&oacute;n de otra cadena.</P>
+<PRE>    boolean startsWith( String prefix );
+    boolean startsWith( String prefix,int offset );
+    boolean endsWith( String suffix );</PRE>
+<P>Devuelve si esta cadena comienza o termina con un cierto prefijo o sufijo comenzando en un determinado desplazamiento.</P>
+<PRE>    int indexOf( int ch );
+    int indexOf( int ch,int fromindex );
+    int lastIndexOf( int ch );
+    int lastIndexOf( int ch,int fromindex );
+    int indexOf( String str );
+    int indexOf( String str,int fromindex );
+    int lastIndexOf( String str );
+    int lastIndexOf( String str,int fromindex );</PRE>
+<P>Devuelve el primer/&uacute;ltimo &iacute;ndice de un car&aacute;cter/cadena empezando la b&uacute;squeda a partir de un determinado desplazamiento.</P>
+<PRE>    String substring( int beginindex );
+    String substring( int beginindex,int endindex );
+    String concat( String str );
+    String replace( char oldchar,char newchar );
+    String toLowerCase();
+    String toUpperCase();
+    String trim();</PRE>
+<P>Ajusta los espacios en blanco al comienzo y al final de la cadena.</P>
+<PRE>    void getChars( int srcBegin,int srcEnd,char dst[],int dstBegin );
+    void getBytes( int srcBegin,int srcEnd,byte dst[],int dstBegin );
+    String toString();
+    char toCharArray();
+    int hashCode();</PRE>
+<FONT COLOR="#0000ff"><H3>Funciones ValueOf</H3>
+</FONT><P>La clase <B>String</B> posee numerosas funciones para transformar valores de otros tipos de datos a su representaci&oacute;n como cadena. Todas estas funciones tienen el nombre de <I>valueOf</I>, estando el m&eacute;todo sobrecargado para todos los tipos de datos b&aacute;sicos.</P>
+<P>Veamos un ejemplo de su utilizaci&oacute;n:</P>
+<PRE>    String Uno = new String( "Hola Mundo" );
+    float f = 3.141592;
+
+    String PI = Uno.valueOf( f );
+    String PI = String.valueOf( f );     // Mucho m&aacute;s correcto</PRE>
+<FONT FACE="Courier New" COLOR="#0000ff"><H4>Funciones de Conversi&oacute;n</H4>
+</FONT><PRE>    String valueOf( boolean b );
+    String valueOf( int i );
+    String valueOf( long l );
+    String valueOf( float f );
+    String valueOf( double d );
+    String valueOf( Object obj );
+    String valueOf( char data[] );
+    String valueOf( char data[],int offset,int count );
+Usa arrays de caracteres para la cadena.
+    String copyValueOf( char data[] );
+    String copyValueOf( char data[],int offset,int count );
+Crea un nuevo array equivalente para la cadena.</PRE>
+<P>&nbsp;</P>
+<FONT SIZE=6 COLOR="#0000ff"><P>Desarrollo</P>
+</FONT><P>&nbsp;</P>
+<P>1.- Identifique que es lo que realiza el siguiente programa as&iacute; como describa detalladamente su funcionamiento.</P>
+<FONT FACE="Courier New"><P>&nbsp;</P>
+<P>class Prueba{</P>
+<P>  public static void main( String args[] )</P>
+<P>  {</P>
+<P>   String cadena = "1234";</P>
+<P>   String cadenaf = "1.358";</P>
+<P>   String cadenad = "102.3654";</P>
+<P>   char c;</P>
+<P>   for( int n=0; n&lt;cadena.length(); n++ ) {</P>
+<P>      c = cadena.charAt(n);</P>
+<P>      int i = Character.digit(c, 10);</P>
+<P>      System.out.println( "El n£mero entero es : " + i );</P>
+<P>      }</P>
+<P>   Float fo = Float.valueOf( cadenaf );</P>
+<P>   System.out.println( "El objeto Flotante es : " + fo );</P>
+<P>   float f = fo.floatValue();</P>
+<P>   System.out.println( "El n&uacute;mero flotante es : " + f );</P>
+<P>   Double D = Double.valueOf( cadenad );</P>
+<P>   System.out.println( "El objeto Double es : " + D );</P>
+<P>   double d = D.doubleValue();</P>
+<P>   System.out.println( "El n&uacute;mero double es : " + d );</P>
+<P>  }</P>
+<P>}</P>
+</FONT><P>&nbsp;</P>
+<P>2.- Realice la misma actividad que la del punto anterior para el siguiente programa</P>
+<FONT FACE="Courier New"><P>import java.io.*;</P>
+<P>&nbsp;</P>
+<P>class leerdatos {</P>
+<P> public static String leer()</P>
+<P> { </P>
+<P>  String s="";</P>
+<P>  DataInputStream sd = new DataInputStream(System.in);</P>
+<P>  System.out.flush();</P>
+<P>  try</P>
+<P>  {</P>
+<P>    s = sd.readLine();</P>
+<P>  }</P>
+<P>  catch(IOException e)</P>
+<P>  {</P>
+<P>    System.out.println("ERROR: Se introdujo el dato");</P>
+<P>    System.out.println(e);</P>
+<P>    }</P>
+<P>  return s;</P>
+<P> }</P>
+<P> public static void main( String args[] )</P>
+<P> {</P>
+<P>  char ca;</P>
+<P>  String cadena;</P>
+<P>  int ban = 0;</P>
+<P>  float a = (float)0.0;//, b;</P>
+<P>  Float af;//, bf;</P>
+<P>&nbsp;</P>
+<P>  while( ban!=1 ) {</P>
+<P>   System.out.print( "Introduzca un flotante :: " );</P>
+<P>   cadena = leer();</P>
+<P>   ca = cadena.charAt[0];</P>
+<P>   if( ca!='\r' ) {</P>
+<P>     af = Float.valueOf( cadena );</P>
+<P>     a += af.floatValue();</P>
+<P>     }</P>
+<P>   else ban = 1;</P>
+<P>   }</P>
+<P>  System.out.print( "La suma de sus n£meros es :: " + a );</P>
+<P> }</P>
+<P>}</P>
+</FONT><P>&nbsp;</P>
+<P>3.- Realice un programa INTELIGENTE que reciba como entrada un n&uacute;mero antecedido por un operador y que el programa realice la operaci&oacute;n correspondiente, adem&aacute;s de que el mismo parar&aacute; en cuanto reciba como entrada un retorno de carro, para finalizar despliegue el resultado. Por lo menos deber&aacute; utilizar 10 operadores sin hacer uso de pilas. solo con arreglos matriciales. Ejemplo:</P>
+<P>variable:  X=0.0</P>
+<P>Entrada al programa: +6.4</P>
+<P>Respuesta  del programa X+=6.4</P>
+<P>Entrada al programa: *(-10)</P>
+<P>&nbsp;Respuesta del programa X*=(-10)</P>
+<P>Entrada al programa: &gt;&gt;1</P>
+<P>Respuesta del programa: X = (X&gt;&gt;1)</P>
+<P>Entrada al programa: <FONT FACE="Symbol">&#191;</FONT>
+ (ENTER)</P>
+<P>Respuesta del programa: El resultado de sus operaciones X+=6.4, X*=(-10), X&gt;&gt;1 es X=32</P>
+<P>¿Desea hacer otro c&aacute;lculo?</P>
+<P>&nbsp;</P>
+<FONT SIZE=6 COLOR="#0000ff"><P>Cuestionario</P>
+</FONT><P>1.- Qu&eacute; clase de conversi&oacute;n utilizo en los programas?</P>
+<P>2.- Piensa usted que en Java se puedan implemetar programas inteligentes?</P>
+<P>3.- Qu&eacute; operador le caus&oacute; mayor complejidad en implementar?</P>
+<P>4.- Piensa que est&aacute;n bien pensadas las clases para los tipos de datos?</P>
+<P>5.- Implemente el programa 3 del desarrollo con pilas.</P><DIR>
+
+<P ALIGN="CENTER"><IMG SRC="Image19.gif" WIDTH=536 HEIGHT=5></P>
+<B><FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">P&aacute;gina relacionada 1 | P&aacute;gina relacionada 2 | P&aacute;gina relacionada 3</P></DIR>
+</B></FONT></BODY>
+</HTML>

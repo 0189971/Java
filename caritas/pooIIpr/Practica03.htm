@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>poopr3</TITLE>
+<META NAME="Título" CONTENT=" ">
+<META NAME="Template" CONTENT="D:\Archivos de programa\Microsoft Office\Plantillas\Páginas Web\Asistente para páginas Web.wiz">
+</HEAD>
+<BODY TEXT="#000000" LINK="#0000ff" VLINK="#800080" BACKGROUND="Image6.gif">
+<DIR>
+
+<B><FONT FACE="Garamond" SIZE=6><P>Pr&aacute;ctica III Tipos y variables</P></DIR>
+
+</FONT><I><FONT FACE="Garamond" SIZE=4 COLOR="#ff0000"><P>Objetivo:</P><DIR>
+<DIR>
+
+</B></I></FONT><P>Al t&eacute;rmino de la pr&aacute;ctica el alumno ser&aacute; capaz de comprender, utilizar y aplicar correctamente los tipos y variables utilizados en el lenguaje de programaci&oacute;n Java, as&iacute; como tambi&eacute;n las matrices. </P>
+<FONT FACE="Courier New"><P>&nbsp;</P></DIR>
+</DIR>
+
+</FONT><B><I><FONT FACE="Garamond" SIZE=4 COLOR="#ff0000"><P>Introducci&oacute;n:</P>
+</B></I></FONT><FONT FACE="Garamond"><P>El uso apropiado de los tipos de datos dispuestos por el lenguaje de programaci&oacute;n Java, le da una potencia enorme, esto a pesar de que Java es un lenguaje orientado a objetos. Un valor constante en Java se crea utilizando una representaci&oacute;n literal de &eacute;l. Java utiliza cinco tipos de elementos: enteros, reales en coma flotante, booleanos, caracteres y cadenas, que se pueden poner en cualquier lugar del c&oacute;digo fuente de Java. Cada uno de estos literales tiene un tipo correspondiente asociado con &eacute;l.</P>
+<P>Enteros:</P><DIR>
+<DIR>
+
+</FONT><B><PRE>    byte  &#9;&#9;8 bits  &#9;&#9;complemento a dos
+    short  &#9;&#9;16 bits  &#9;&#9;complemento a dos
+    int  &#9;&#9;        32 bits  &#9;&#9;complemento a dos
+    long  &#9;&#9;64 bits  &#9;&#9;complemento a dos
+    Por ejemplo:&#9;21      077     0xDC00</PRE></DIR>
+</DIR>
+
+</B><FONT FACE="Garamond"><P>Reales en coma flotante:</P><DIR>
+<DIR>
+
+</FONT><B><PRE>    float  &#9;&#9;32 bits  &#9;&#9;IEEE 754
+    double  &#9;&#9;64 bits  &#9;&#9;IEEE 754
+    Por ejemplo:&#9;3.14    2e12    3.1E12</PRE></DIR>
+</DIR>
+
+</B><FONT FACE="Garamond"><P>Booleanos:</P><DIR>
+<DIR>
+
+</FONT><B><PRE>    true
+    false</PRE></DIR>
+</DIR>
+
+</B><FONT FACE="Garamond"><P>Caracteres:</P><DIR>
+<DIR>
+
+</FONT><B><PRE>    Por ejemplo:&#9;a       \t      \u????    [????] es un n&uacute;mero <I>unicode</PRE></DIR>
+</DIR>
+
+</B></I><FONT FACE="Garamond"><P>Cadenas:</P><DIR>
+<DIR>
+
+</FONT><B><PRE>    Por ejemplo:&#9;"Esto es una cadena literal"</PRE></DIR>
+</DIR>
+
+</B><I><FONT COLOR="#ff0000"><H3>Variables</H3>
+</I></FONT><FONT FACE="Garamond"><P>Una variable es la unidad b&aacute;sica de almacenamiento de un programa en Lava. Una variable se define mediante la combinaci&oacute;n de un identificador, un tipo y un inicializador opcional. Adem&aacute;s de que todas las variables tienen un &aacute;mbito que define su alcance (scope) y su tiempo de vida. La declaraci&oacute;n de una variable se realiza de la siguiente forma:</P><DIR>
+<DIR>
+
+<B><P>Tipo identificador = valor, didentificador = valor.......;</P></DIR>
+</DIR>
+
+</B><P>Ejemplos de lo anterior se pueden ver a continuaci&oacute;n:</P><DIR>
+<DIR>
+
+<B><P>int a, b, c; // declara tres enteros tres enteros a, b, y c.</P>
+<P>int d = 3, e, f = 5; // declara tres o m&aacute;s enteros, inicializando d y f.</P>
+<P>byte z = 22; // inicializa z.</P>
+<P>double pi = 3.14159; // declara una aproximaci&oacute;n de pi.</P>
+<P>char x = 'x'; // La variable x tiene el valor de 'x'.</P>
+</B><P>&nbsp;</P></DIR>
+</DIR>
+
+</FONT><I><FONT COLOR="#ff0000"><H3>Matrices</H3>
+</I></FONT><FONT FACE="Garamond"><P>Se pueden declarar en Java matrices de cualquier tipo: </P>
+</FONT><B><PRE>    char s[];
+    int iArray[];</PRE>
+</B><FONT FACE="Garamond"><P>Incluso se pueden construir arreglos de matrices:</P>
+</FONT><B><PRE>    int tabla[][] = new int[4][5];</PRE>
+</B><FONT FACE="Garamond"><P>Los l&iacute;mites de los arrays se comprueban en tiempo de ejecuci&oacute;n para evitar desbordamientos y la corrupci&oacute;n de memoria.</P>
+<P>En Java una matr&iacute;z es realmente un objeto, porque tiene redefinido el operador <I>[]</I>. Tiene una funci&oacute;n miembro: <I>length</I>. Se puede utilizar este m&eacute;todo para conocer la longitud de cualquier matr&iacute;z.</P>
+</FONT><B><PRE>    int a[][] = new int[10][3];
+    a.length;         /* 10 */
+    a[0].length;      /*  3 */</PRE>
+</B><FONT FACE="Garamond"><P>Para crear un array en Java hay dos m&eacute;todos b&aacute;sicos. Crear un array vac&iacute;o:</P>
+</FONT><B><PRE>    int lista[] = new int[50];</PRE>
+</B><FONT FACE="Garamond"><P>o se puede crear ya el array con sus valores iniciales:</P>
+</FONT><B><PRE>    String nombres[] = {
+        "Juan","Pepe","Pedro","Maria"
+        };</PRE>
+</B><FONT FACE="Garamond"><P>Esto que es equivalente a:</P>
+</FONT><B><PRE>    String nombres[];
+    nombres = new String[4];
+    nombres[0] = new String( "Juan" );
+    nombres[1] = new String( "Pepe" );
+    nombres[2] = new String( "Pedro" );
+    nombres[3] = new String( "Maria" );</PRE>
+</B><FONT FACE="Garamond"><P>No se pueden crear matrices est&aacute;ticos en tiempo de compilaci&oacute;n:</P>
+</FONT><B><PRE>    int lista[50];  // generar&aacute; un error en tiempo de compilaci&oacute;n</PRE>
+</B><FONT FACE="Garamond"><P>Tampoco se puede rellenar una matriz sin declarar el tama&ntilde;o con el operador <I>new</I>:</P>
+</FONT><B><PRE>    int lista[];
+    for( int i=0; i &lt; 9; i++ )
+        lista[i] = i;</PRE>
+<I><FONT FACE="Garamond" SIZE=4 COLOR="#ff0000"><P>Desarrollo de la pr&aacute;ctica.</P>
+<OL>
+
+</B></I></FONT><FONT FACE="Garamond" COLOR="#0000ff"><LI>Implementar un programa en donde utilice cada uno de los tipos de datos que tiene el lenguaje Java.</LI>
+<LI>Utilizar los tipos de datos para comprobar el l&iacute;mite que tienen antes de sufrir desbordamiento y reportarlos como comentarios en su aplicaci&oacute;n.</LI>
+<LI>Para los siguientes programas indicar con comentarios lo que realiza cada uno, as&iacute; como la salida que producen</LI>
+<B><P>(a)</P>
+</FONT><FONT FACE="Garamond"><P>class DosDim {</P>
+<P>public static void main(String args[]) {</P>
+<P>int dosD[][] = new int[4][];</P>
+<P>dosD[0] = new int[1];</P>
+<P>dosD[1] = new int[2];</P>
+<P>dosD[2] = new int[3];</P>
+<P>dosD[3] = new int[4];</P>
+<P>&nbsp;</P>
+<P>int i, j, k = 0;</P>
+<P>&nbsp;</P>
+<P>for(i=0; i&lt;4; i++) </P>
+<P>for(j=0; j&lt;i+1; j++) {</P>
+<P>dosD[i][j] = k;</P>
+<P>k++;</P>
+<P>}</P>
+<P>&nbsp;</P>
+<P>for(i=0; i&lt;4; i++) {</P>
+<P>for(j=0; j&lt;i+1; j++) </P>
+<P>System.out.print(dosD[i][j] + " ");</P>
+<P>System.out.println();</P>
+<P>}</P>
+<P>}</P>
+<P>}</P>
+<P>&nbsp;</P>
+</FONT><FONT FACE="Garamond" COLOR="#0000ff"><P>(b)</P>
+</FONT><FONT FACE="Garamond"><P>class Matrix {</P>
+<P>public static void main(String args[]) {</P>
+<P>double m[][] = {</P>
+<P>{ 0*0, 1*0, 2*0, 3*0 },</P>
+<P>{ 0*1, 1*1, 2*1, 3*1 },</P>
+<P>{ 0*2, 1*2, 2*2, 3*2 },</P>
+<P>{ 0*3, 1*3, 2*3, 3*3 } };</P>
+<P>int i, j;</P>
+<P>&nbsp;</P>
+<P>for(i=0; i&lt;4; i++) {</P>
+<P>for(j=0; j&lt;4; j++)</P>
+<P>System.out.print(m[i][j] + " ");</P>
+<P>System.out.println();</P>
+<P>}</P>
+<P>}</P>
+<P>}</P>
+<P>&nbsp;</P>
+</FONT><FONT FACE="Garamond" COLOR="#0000ff"><P>(c)</P>
+</FONT><FONT FACE="Garamond"><P>class tresDMatriz {</P>
+<P>public static void main(String args[]) {</P>
+<P>int tresD[][][] = new int[3][4][5];</P>
+<P>int i, j, k;</P>
+<P>for(i=0; i&lt;3; i++) </P>
+<P>for(j=0; j&lt;4; j++)</P>
+<P>for(k=0; k&lt;5; k++)</P>
+<P>tresD[i][j][k] = i * j * k;</P>
+<P>&nbsp;</P>
+<P>for(i=0; i&lt;3; i++) {</P>
+<P>for(j=0; j&lt;4; j++) {</P>
+<P>for(k=0; k&lt;5; k++) </P>
+<P>System.out.print(tresD[i][j][k] + " "); </P>
+<P>System.out.println();</P>
+<P>}</P>
+<P>System.out.println();</P>
+<P>}</P>
+<P>}</P>
+<P>}</P>
+</B></FONT><FONT FACE="Garamond" COLOR="#0000ff"><LI>Resuelva los siguientes problemas.</LI></OL>
+
+<OL TYPE="I">
+
+</FONT><FONT FACE="Garamond"><LI>Realice un programa en donde se realicen todas las conversiones de tipos utilizados por Java. Tenga cuidado con el Ensanchamiento y el Extrechamiento entre tipos.</LI>
+<LI>Desarrolle una aplicaci&oacute;n en donde determine si un cliente de una tienda departamental ha excedido o no el l&iacute;mite de su cuenta de cr&eacute;dito. Se cuenta con la siguiente informaci&oacute;n para cada cliente:</LI></OL>
+
+<OL TYPE="a">
+
+<LI>N&uacute;mero de cuenta</LI>
+<LI>Saldo al principio del mes</LI>
+<LI>Total de art&iacute;culos adquiridos a cr&eacute;dito por este cliente durante este mes</LI>
+<LI>Total de todos los cr&eacute;ditos aplicados a la cuenta de este cliente durante este mes</LI>
+<LI>L&iacute;mite de cr&eacute;dito permitido</LI></OL>
+<DIR>
+
+<P>El programa deber&aacute; introducir cada uno de estos datos desde campos de texto como enteros, calcular el nuevo saldo (=saldo inicial + compras - cr&eacute;ditos), exhibir si el nuevo saldo excede el l&iacute;mite de cr&eacute;dito del cliente. En el caso de los clientes que excedieron su l&iacute;mite de cr&eacute;dito, el programa deber&aacute; exhibir el mensaje "L&iacute;mite de cr&eacute;dito excedido"</P></DIR>
+
+<OL TYPE="I">
+
+<LI>Un palindromo es un n&uacute;mero o una frase que se lee igual de izquierda a derecha que de derecha a izquierda. Por ejemplo los siguientes n&uacute;meros de cinco d&iacute;gitos son palindromos: 12321, 55555, 45554 y 11611. Escriba un programa (aplicaci&oacute;n) que lea un entero de cinco d&iacute;gitos y determine si es o no un palindromo.</LI></OL>
+
+<P>&nbsp;</P>
+</FONT><B><I><FONT FACE="Garamond" SIZE=4 COLOR="#ff0000"><P>Cuestionario.</P>
+</B></I></FONT><FONT FACE="Garamond"><P>1.-  Indique cuales fueron los valores de desbordamiento de los tipos utilizados en Java.</P>
+<P>2.-  Indique si existen problemas con los tipos de datos al realizar una conversi&oacute;n entre tipos, si existen explique detalladamente cuales son.</P>
+<P>3.-  Cuales fueron las dificultades que encontr&oacute; en el desarrollo de sus programas?</P>
+<P>4.-  Indique la forma de utilizar un arreglo matricial.</P>
+<P>5.-  Qu&eacute; hace la declaraci&oacute;n de variable tipo DATE.(investigar)</P>
+<P>&nbsp;</P><DIR>
+
+</FONT><P ALIGN="CENTER"><IMG SRC="Image12.gif" WIDTH=536 HEIGHT=5></P>
+<B><FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">P&aacute;gina relacionada 1 | P&aacute;gina relacionada 2 | P&aacute;gina relacionada 3</P></DIR>
+</B></FONT></BODY>
+</HTML>

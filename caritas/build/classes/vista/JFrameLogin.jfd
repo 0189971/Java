@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_65" class="java.beans.XMLDecoder"> 
+ <object class="com.jformdesigner.model.FormModel"> 
+  <void property="contentType"> 
+   <string>form/swing</string> 
+  </void> 
+  <void property="root"> 
+   <object class="com.jformdesigner.model.FormRoot"> 
+    <void method="add"> 
+     <object class="com.jformdesigner.model.FormWindow"> 
+      <string>javax.swing.JFrame</string> 
+      <object class="com.jformdesigner.model.FormLayoutManager"> 
+       <class>java.awt.BorderLayout</class> 
+      </object> 
+      <void method="setProperty"> 
+       <string>title</string> 
+       <string>Aplicación de música</string> 
+      </void> 
+      <void method="add"> 
+       <object class="com.jformdesigner.model.FormContainer"> 
+        <string>javax.swing.JPanel</string> 
+        <object class="com.jformdesigner.model.FormLayoutManager"> 
+         <class>com.jformdesigner.runtime.NullLayout</class> 
+        </object> 
+        <void property="name"> 
+         <string>panel1</string> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormComponent"> 
+          <string>javax.swing.JButton</string> 
+          <void method="setProperty"> 
+           <string>text</string> 
+           <string>Artista</string> 
+          </void> 
+          <void property="name"> 
+           <string>btnArtista</string> 
+          </void> 
+          <void method="addEvent"> 
+           <object class="com.jformdesigner.model.FormEvent"> 
+            <string>java.awt.event.ActionListener</string> 
+            <string>actionPerformed</string> 
+            <string>btnArtistaActionPerformed</string> 
+            <boolean>true</boolean> 
+           </object> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <class>com.jformdesigner.runtime.NullConstraints</class> 
+          <void method="setProperty"> 
+           <string>x</string> 
+           <int>5</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>y</string> 
+           <int>30</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>width</string> 
+           <int>100</int> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormComponent"> 
+          <string>javax.swing.JButton</string> 
+          <void method="setProperty"> 
+           <string>text</string> 
+           <string>Disco</string> 
+          </void> 
+          <void property="name"> 
+           <string>btnDisco</string> 
+          </void> 
+          <void method="addEvent"> 
+           <object class="com.jformdesigner.model.FormEvent"> 
+            <string>java.awt.event.ActionListener</string> 
+            <string>actionPerformed</string> 
+            <string>btnDiscoActionPerformed</string> 
+            <boolean>true</boolean> 
+           </object> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <class>com.jformdesigner.runtime.NullConstraints</class> 
+          <void method="setProperty"> 
+           <string>x</string> 
+           <int>5</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>y</string> 
+           <int>270</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>width</string> 
+           <int>100</int> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormComponent"> 
+          <string>javax.swing.JButton</string> 
+          <void method="setProperty"> 
+           <string>text</string> 
+           <string>Compañia</string> 
+          </void> 
+          <void property="name"> 
+           <string>btnCompania</string> 
+          </void> 
+          <void method="addEvent"> 
+           <object class="com.jformdesigner.model.FormEvent"> 
+            <string>java.awt.event.ActionListener</string> 
+            <string>actionPerformed</string> 
+            <string>btnCompaniaActionPerformed</string> 
+            <boolean>true</boolean> 
+           </object> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <class>com.jformdesigner.runtime.NullConstraints</class> 
+          <void method="setProperty"> 
+           <string>x</string> 
+           <int>5</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>y</string> 
+           <int>190</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>width</string> 
+           <int>100</int> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormComponent"> 
+          <string>javax.swing.JButton</string> 
+          <void method="setProperty"> 
+           <string>text</string> 
+           <string>Genero</string> 
+          </void> 
+          <void property="name"> 
+           <string>btnGenero</string> 
+          </void> 
+          <void method="addEvent"> 
+           <object class="com.jformdesigner.model.FormEvent"> 
+            <string>java.awt.event.ActionListener</string> 
+            <string>actionPerformed</string> 
+            <string>btnGeneroActionPerformed</string> 
+            <boolean>true</boolean> 
+           </object> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <class>com.jformdesigner.runtime.NullConstraints</class> 
+          <void method="setProperty"> 
+           <string>x</string> 
+           <int>5</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>y</string> 
+           <int>350</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>width</string> 
+           <int>100</int> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormComponent"> 
+          <string>javax.swing.JButton</string> 
+          <void method="setProperty"> 
+           <string>text</string> 
+           <string>Canción</string> 
+          </void> 
+          <void property="name"> 
+           <string>btnCancion</string> 
+          </void> 
+          <void method="addEvent"> 
+           <object class="com.jformdesigner.model.FormEvent"> 
+            <string>java.awt.event.ActionListener</string> 
+            <string>actionPerformed</string> 
+            <string>btnCancionActionPerformed</string> 
+            <boolean>true</boolean> 
+           </object> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <class>com.jformdesigner.runtime.NullConstraints</class> 
+          <void method="setProperty"> 
+           <string>x</string> 
+           <int>5</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>y</string> 
+           <int>110</int> 
+          </void> 
+          <void method="setProperty"> 
+           <string>width</string> 
+           <int>100</int> 
+          </void> 
+         </object> 
+        </void> 
+       </object> 
+       <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+        <class>java.lang.String</class> 
+        <void method="setProperty"> 
+         <string>value</string> 
+         <string>West</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="name"> 
+       <string>this</string> 
+      </void> 
+     </object> 
+     <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+      <null/> 
+      <void method="setProperty"> 
+       <string>location</string> 
+       <object class="java.awt.Point"> 
+        <int>0</int> 
+        <int>0</int> 
+       </object> 
+      </void> 
+      <void method="setProperty"> 
+       <string>size</string> 
+       <object class="java.awt.Dimension"> 
+        <int>705</int> 
+        <int>465</int> 
+       </object> 
+      </void> 
+     </object> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

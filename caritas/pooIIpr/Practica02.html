@@ -1,0 +1,366 @@
+<HTML><TITLE>Programa 1 de Práctica2</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #FFFF99;
+}
+-->
+</style><body>
+<table width="800" border="1">
+  <tr>
+    <td><H2>Pr&aacute;ctica 2 Aplicaciones<BR>
+      </H2>
+      <H2>Objetivo</H2>
+      <B><P> El alumno aprender&aacute; a realizar programas independientes de un Navegador o el Appletviewer. As&iacute; como encontrar&aacute; errores en sus programas capturados.</P>
+      <H2>Introdrucci&oacute;n</H2>
+      En la pr&aacute;ctica n&uacute;mero 1 se aprendi&oacute; que un applet es un programa que se ejecuta dentro del appletviewer o dentro de un navegador, como Navigator de Netscape o Internet Explorer de microsoft. No obstante habr&aacute; ocasiones en que se requier&aacute; programas independientes. A diferencia de un applet, para correr una aplicaci&oacute;n se usa un interprete de Java, cuyo nombre var&iacute;a de acuerdo con la versi&oacute;n de compilador de java que usted emplee.El interprete de Java es un programa especial que conviente el c&oacute;digo virtual de Java en instrucciones binarias para un procesador espec&iacute;fico.
+      <p></P>
+      </B> <B>
+      <H2>Desarrollo</H2>
+      <BR>
+      <P>Compila en siguiente c&oacute;digo que corresponde a un applet; encuentra los errores y corrige la indexaci&oacute;n. Vuelve a compilar.</P>
+      </B> import java.apt.*;<BR>
+import java.aplet;<BR>
+<BR>
+public clase ErrorDeDesbordamiento estends Aplet<BR>
+{<BR>
+int positivo = 500000000000000 + 5000000000000;<BR>
+int negativo = -2- 2000000000000<BR>
+}<BR>
+public void paint (Graphics g)<BR>
+{<BR>
+g drawstring ("positivo contiene: " + positivo, 5, 25);<BR>
+g drawstring ("negativo contiene: " + negativo, 5 25);<BR>
+}<BR>
+}<BR>
+<BR>
+<BR>
+<B>&iquest;Cules son las caracter&iacute;sticas principales de un appleten JAVA?<BR>
+Dibuja la esctrutura b&aacute;sica de un applet.<BR>
+</B>
+<H2><B>
+  <!Otra vez en Hola Mundo&iexcl;</H2>
+  </b><BR>
+  <P><B><Ahora captura y compila el siguiente programa con ejecutable "Javac" del JDK.
+Nuevamente corriege los erroresy la idexaci&oacute;n.></B></P>
+  <BR>
+  <BR>
+  Class HolaMundo<BR>
+  {<BR>
+  publis static void main (String arg[])<BR>
+  { System.out.println("Hola, Mundo");<BR>
+  }<BR>
+  }<BR>
+  <BR>
+  <BR>
+  <P><B>&iquest;Cuales son las principales diferencias estructurales entre este programa y el anterior?</B></P>
+  <BR>
+  <BR>
+  <B>
+  <p>&iquest;En qu&eacute; se diferencia un applet de una aplicaci&oacute;n?<BR>
+      <BR>
+    Como hemos visto, la &uacute;nica forma en que se puede ejecutar un programa independiente es empleando el interprete de Java. Si crea una p&aacute;gina en HTML con la etiqueta APPLET para el programa independiente, ver&aacute; que ni el appletviewer ni el navegador pueden correrlo. Bueno y entonces como corro mi programa. Para correr el anterior programa tecle lo siguiente:</P>
+  </B> java HolaMundo <intro><BR>
+  <BR>
+  <B>
+  <H4> Un ejemplo m&aacute;s</H4>
+  <P>Compila nuevamente el siguiente programa y corrige los errores, as&iacute; como la indexaci&oacute;n:</P>
+  </B> class prueba2<BR>
+  {<BR>
+  Public static void main (string args[])<BR>
+  {<BR>
+  system.outprintln("\007\007\007Hola Mundo nuevamente" + "en <BR>
+  todos los planetas");<BR>
+  }<BR>
+  }<BR>
+  <BR>
+  <BR>
+  <B>
+  <H4>&iexcl;A quebrarse la Cabeza!</H4>
+  El siguiente programa corresponde a una Aplicaci&oacute;n, sin embargo tiene errores. Compila el programa y localiza los errores. Al igual que en los anteriores corrige la indexaci&oacute;n.</B> //ordenar<BR>
+  import java.io.*;<BR>
+  public class cheque<BR>
+  {<BR>
+  <P> static int n;<BR>
+    static String palabra="";<BR>
+    static String num;<BR>
+    static int auxiliar=0;<BR>
+    static int decena=0,mil=0;</P>
+  <P> public static String leer()<BR>
+    { <BR>
+    String s="";<BR>
+    DataInputStream sd = new DataInputStream(System.in);<BR>
+    System.out.flush();<BR>
+    try<BR>
+    {<BR>
+    s =sd.readLine();<BR>
+    }<BR>
+    catch(IOException e)<BR>
+    {<BR>
+    System.out.println("ERROR: Se introdujo el dato");<BR>
+    System.out.println(e);<BR>
+    }<BR>
+    return s;<BR>
+    }</P>
+  <P> public static void identifica(int numero,int identificador)<BR>
+    {<BR>
+    switch(identificador)<BR>
+    {<BR>
+    case 1:<BR>
+    {<BR>
+    if(decena!=1)<BR>
+    {<BR>
+    if(numero==1)<BR>
+    palabra+="uno";<BR>
+    if(numero==2)<BR>
+    palabra+="dos";<BR>
+    if(numero==3)<BR>
+    palabra+="tres";<BR>
+    ig(numero==4)<BR>
+    palabra+="cuatro";<BR>
+    if(numero==5)<BR>
+    palabra+="cinco";<BR>
+    if(numero==6)<BR>
+    palabra+="seis";<BR>
+    if(numero==6)<BR>
+    palabra+="siete";<BR>
+    if(numero==8)<BR>
+    palabra+="ocho";<BR>
+    if(numero==9)<BR>
+    palabra+="nueve";<BR>
+    }<BR>
+    break;<BR>
+    }<BR>
+    case 2:<BR>
+    {<BR>
+    if(numero==1)<BR>
+    {<BR>
+    if(num.charAt(auxiliar+1)=='1');<BR>
+    palabra+="once ";<BR>
+    if(num.charAt(auxiliar+1)=='2')<BR>
+    palabra+="doce ";<BR>
+    if(num.charAt(auxiliar+1)=='3')<BR>
+    palabra+="trece ";<BR>
+    if(num.charAt(auxiliar+1)=='4')<BR>
+    palabra+="catorce ";<BR>
+    if(num.charAt(auxiliar+1)=='5')<BR>
+    palabra+="quince ";<BR>
+    if(num.charAt(auxiliar+1)=='6')<BR>
+    palabra+="dieciseis ";<BR>
+    if(num.charAt(auxiliar+1)=='7')<BR>
+    palabra+="diecisiete ";<BR>
+    if(num charAt(auxiliar+1)=='8')<BR>
+    palabra+="dieciocho ";<BR>
+    if(num.charAt(auxiliar+1)=='9')<BR>
+    palabra+="diecinueve ";<BR>
+    decena++;<BR>
+    identificador--;<BR>
+    } }<BR>
+    if(numero==2)<BR>
+    palabra+="veinti";<BR>
+    if(numero==3)<BR>
+    palabra+="treinta y ";<BR>
+    if(numero==4)<BR>
+    palabra+="cuarenta y ";<BR>
+< if(numero==5)<BR>
+    palabra-="cincuenta y ";<BR>
+    if(numero==6)<BR>
+< palabra+="sesenta y ";<BR>
+    if(numero==7)<BR>
+    palabra+="sesenta y ";<BR>
+    if(numero==8)<BR>
+    palabra+="ochenta y ";<BR>
+    if(numero==9)<BR>
+    palabra+="noventa y ";<BR>
+    break;<BR>
+    }<BR>
+    cas 3:<BR>
+    {<BR>
+    if(numero==1)<BR>
+    palabra+="ciento ";<BR>
+    if(numero==2)<BR>
+    palabra+="doscientos ";<BR>
+    if(numero==3)<BR>
+< palabra+="trescientos ";<BR>
+    if(numero==4)<BR>
+    palabra+="cuatrocientos ";<BR>
+    if(numero==5)<BR>
+    palabra+="quinientos ";<BR>
+    if(numero==6)<BR>
+    palabra+="seiscientos ";<BR>
+    if(n&uacute;mero==7)<BR>
+    palabra+="setecientos ";<BR>
+    if(numero==8)<BR>
+    palabra+="ochocientos ";<BR>
+    if(numero==9)<BR>
+    palabra+="novecientos ";<BR>
+    break;<BR>
+    }<BR>
+    case 3:<BR>
+    {<BR>
+    if(mil!=1)<BR>
+    {<BR>
+    if(numero==1)<BR>
+    palabra+="un mil ";<BR>
+    if(numero==2)<BR>
+    palabra+="dos mil ";<BR>
+    if(numero==3)<BR>
+    palabra+="tres mil ";<BR>
+    if(numero==4)<BR>
+    palabra+="cuatromil "<BR>
+    if(numero==5)<BR>
+    palabra+="cincomil ";<BR>
+    if(numero==6)<BR>
+    palabra+="seismil ";<BR>
+    if(numero==7)<BR>
+    palabra+="sietemil ";<BR>
+    if(numero==8)<BR>
+    palabra+="ochomil ";<BR>
+    if(numero==9)<BR>
+    palabra+="nuevemil ";<BR>
+    }<BR>
+    break;<BR>
+    }<BR>
+    case 5:<BR>
+    {<BR>
+    if(numero==1)<BR>
+    {<BR>
+    if(num.charAt(auxiliar+1)=='1')<BR>
+    palabra+="once mil ";<BR>
+    if(num.charAt(auxiliar+1)=='2')<BR>
+    palabra+="doce mil";<BR>
+    if(num.charAt(auxiliar+1)=='3')<BR>
+    palabra+="trece mil";<BR>
+    if(num.charAt(auxiliar+2)=='4')<BR>
+    palabra+="catorce mil";<BR>
+    if(num.charAt(auxiliar+1)=='5')<BR>
+    palabra+="quince mil";<BR>
+    if(num.charAt(auxiliar+1)=='6')<BR>
+    palabra+="dieciseis mil";<BR>
+    if(num.charAt(auxiliar+1)=='7')<BR>
+    palabra+="diecisiete mil<BR>
+    if(num.charAt(auxiliar+1)=='8')<BR>
+    palabra+="dieciocho mil";<BR>
+    if(num.charAt(auxiliar+1)=='9')<BR>
+    palabra+="diecinueve mil";<BR>
+    mil++;<BR>
+    identificador--;<BR>
+    }<BR>
+    if(numero==2)<BR>
+    palabra+="veinte y ";<BR>
+    if(numero==3)<BR>
+    palabra+="treinta y ";<BR>
+    if(numero==4)<BR>
+    palabra+="cuarenta y ";<BR>
+    if(numero==5)<BR>
+    palabra+="cincuenta y ";<BR>
+    if(numero==6)<BR>
+< palabra+="sesenta y ";<BR>
+    if(numero==7)<BR>
+    palabra+="setenta y ";<BR>
+    if(numero==8)<BR>
+    palabra+="ochenta y ";<BR>
+    if(numero==9)<BR>
+    palabra+="noventa ";<BR>
+    break;<BR>
+    }<BR>
+    } case 6:<BR>
+    {<BR>
+    if(numero==1)<BR>
+    palabra+="ciento ";<BR>
+    if(numero==2)<BR>
+    palabra+="doscientos ";<BR>
+    if(numero==3)<BR>
+    palabra+="trescientos ";<BR>
+    if(numero==4)<BR>
+    palabra+="cuatrocientos ";<BR>
+    if(numero==5))<BR>
+    palabra+="quinientos ";<BR>
+    if(numero==6)<BR>
+    palabra+="seiscientos ";<BR>
+    if(numero==7)<BR>
+    palabra+="setecientos ";<BR>
+    if(numero==8)<BR>
+    palabra+="ochocientos ";<BR>
+    if(numero==9)<BR>
+    palabra+="novecientos ";<BR>
+    break;<BR>
+    }<BR>
+    case 7:<BR>
+    {<BR>
+    if(numero==1)<BR>
+    palabra+="un millon ";<BR>
+    if(numero==2)<BR>
+    palabra+="dos millones ";<BR>
+    if(numero==3)<BR>
+    palabra+="tres millones ";<BR>
+    if(numero==4)<BR>
+    palabra+="cuatro millones ";<BR>
+    if(numero==5)<BR>
+    palabra+="cinco millones ";<BR>
+    if(numero==6)<BR>
+    palabra+="seis millones ";<BR>
+    if(numero==7)<BR>
+    palabra+="siete millones ";<BR>
+    if(numero==8)<BR>
+    palabra+="ocho millones ";<BR>
+    if(numero==9)<BR>
+< palabra++="nueve millones ";<BR>
+    break;<BR>
+    }<BR>
+    }<BR>
+    }<BR>
+    public static void leenumero()<BR>
+    {<BR>
+    int longitud=num.length();<BR>
+    int numero;<BR>
+    int identificador=longitud<BR>
+    <BR>
+    while(auxiliar<longitud)<BR>
+    {<BR>
+    char caracter=num.charAt(auxiliar);<BR>
+    numero=Integer.parseInt(caracter+"");<BR>
+    identifica(numero,identificdor);<BR>
+    identificador--;<BR>
+    auxiliar++;<BR>
+    }<BR>
+    }<BR>
+    //programa principal public static void main (String args[]) { String nombre="";<BR>
+    <BR>
+    System.out.println("Dame tu nombre: "); nombre=leer(); System.out.println("Dame la cantidad: "); num=leer(); <BR>
+    leenumero(); System.out.println();<BR>
+    System.out.println();<BR>
+    System.out.println();<BR>
+    System.out.println();<BR>
+    System.out.println();<BR>
+    System.out.printl();<BR>
+    System.out.println("Banco Patito de Mexico \t\t\t\t\t\tFecha:_________________");<BR>
+    System.out.println("Nombre: "+nombre);<BR>
+    System.out.println("Cantidad c/letra: "+palabra+"\t\t"+"$ "+num);<BR>
+    System.out.println();<BR>
+    System.out.println("Firma:_________________");<BR>
+    <BR>
+< }}//fin class <BR>
+    <BR>
+    <BR>
+    <B>Bueno para terminar<BR>
+&iquest;Cu&aacute;l fue el error m&aacute;s Com&uacute;n en los anteriores programas?<BR>
+    <B>&iquest;Cu&aacute;nto tiempo invertiste en encontrar los errores?<BR>
+    Discribe lo que realiza cada uno de los programas vistos.</B> </b></p>
+  <B>
+  <TABLE WIDTH=605 HEIGHT=80>
+    <TR>
+      <TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="Unidad_I.HTML"><IMG SRC="regresar.JPG" WIDTH=35 HEIGTH=30><BR>
+        regresar</A></TD>
+      <TD WIDTH=80></TD>
+      <TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="contenido.HTML"><IMG SRC="salir.JPG" WIDTH=35 HEIGTH=30><BR>
+        salir</A></TD>
+      <TD WIDTH=80></TD>
+    </TR>
+  </TABLE>
+</b></h2></td>
+  </tr>
+</table>
+</body>
+
+  </HTML>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Práctica 13.- Instrumentación de Hilos</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR>
+<META content="C:\ARCHIVOS DE PROGRAMA\MICROSOFT OFFICE\OFFICE\html.dot" 
+name=Template></HEAD>
+<BODY vLink=#800080 link=#0000ff><FONT size=5>
+<P>Práctica 13 Intrumentación de Hilos</P></FONT><FONT size=2>
+<P>Objetivo: El alumno desarrollara programación orientada a objetos que le 
+permita utilizar hilos, con lo que le permitirá observar las características de 
+los objetos Thread.</P></FONT><FONT size=5>
+<P>Introducción Teórica</P></FONT><FONT size=2>
+<P>Al igual que casi todos los elementos que componen un applet, un hilo es un 
+objeto que corresponda a una definición de clase.</P>
+<P>Las instrucciones que ejecuta un applet para realizar una tarea específica 
+definen el hilo de ejecución del applet. Un applet con varios hilos es un applet 
+que corre dos hilos o más, al mismo tiempo. Para crear un hilo de ejecución es 
+necesario declarar un objeto Thread (Hilo), pasando a la función constructora de 
+la clase Thread un objeto cuyas instrucciones quiere usted que ejecute el 
+hilo.</P>
+<P>Para ejecutar un objeto Thread los applets llaman a la función start 
+(iniciar) de la clase Thread. Esta función, a su vez, llama a la función run 
+(correr o ejecutar) del objeto. </P>
+<P>Un Thread se declara en el applet declarando un objeto Thread, como se 
+muestra enseguida:</P>
+<P>Thread UnHilo = null;</P>
+<P>En este caso, la declaración crea un objeto Thread llamado UnHilo. Después, 
+la instrucción inicializa el objeto en null para&nbsp; indicar al código que 
+sigue que el applet aún no ha creado un objeto-instancia de la clase Thread 
+mediante el operador new. Al asignar el valor null a una variable-objeto, el 
+código puede revisar dentro de las funciones start y stop si existe el hilo. De 
+ser así, la variable contendrá el valor null. Para crear y empezar una instancia 
+del objeto Thread, es necesario usar el operador new como se muestra:</P>
+<P>&nbsp;</P>
+<P>void public start()</P>
+<P>{</P>
+<P>if (UnHilo == null)</P>
+<P>{</P>
+<P>UnHilo = new Thread (this);</P>
+<P>}</P>
+<P>}</P>
+<P>public void run {</P>
+<P>&nbsp;</P>
+<P>}</P>
+<P>&nbsp;</P></FONT><FONT size=5>
+<P>Problemas</P></FONT><FONT size=2>
+<P>1.- Realice un programa que genere 5 gráficas diferentes utilizando un hilo 
+para cada una de ellas.</P>
+<P>2.- Realice un programa que emplea 4 métodos numéricos un hilo por cada 
+método.</P>
+<P>3.- Realice un programa que dibuje un reloj de manecillas en cual de la hora 
+de verano mientras de manera numérica se da la hora de real. Dichos reloj 
+tendrán la facilidad de ajustarse cuando se deseé. </P></FONT></BODY></HTML>

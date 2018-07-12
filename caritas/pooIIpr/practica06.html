@@ -1,0 +1,170 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>poopr6</TITLE>
+<META NAME="Título" CONTENT=" ">
+<META NAME="Template" CONTENT="D:\Archivos de programa\Microsoft Office\Plantillas\Páginas Web\Asistente para páginas Web.wiz">
+</HEAD>
+<BODY TEXT="#000000" LINK="#0000ff" BACKGROUND="Image6.gif">
+<DIR>
+
+<B><FONT FACE="Garamond" SIZE=7 COLOR="#800000"><P>Pr&aacute;ctica 6</P>
+</FONT><FONT FACE="Garamond" SIZE=4 COLOR="#800080"><P>Objetivo:</P>
+</B></FONT><FONT FACE="Garamond"><P>Con est&aacute; pr&aacute;ctica el alumno confirmar&aacute; los conocimientos adquiridos sobre interfaces y ser&aacute; capaz de  implementar en sus aplicaciones y applets sus propias interfaces.</P>
+</FONT><B><FONT FACE="Garamond" SIZE=4 COLOR="#800080"><P>Introducci&oacute;n:</P>
+</B></FONT><FONT FACE="Garamond"><P>Las interfaces son un medio para simular en </FONT><B><FONT FACE="Garamond" COLOR="#0000ff">JAVA</B></FONT><FONT FACE="Garamond"> la herencia m&uacute;ltiple que en otros lenguajes como </FONT><B><FONT FACE="Garamond" COLOR="#0000ff">C++</B></FONT><FONT FACE="Garamond"> permite que una <B>subclase</B> herede de m&aacute;s de una <B>superclase</B>; podemos decir que ellas juegan un papel importante en el desempe&ntilde;o de los programas escritos en este lenguaje. Al crear una interfaz el programador puede despreocuparse como ser&aacute; el desempe&ntilde;o de esta, as&iacute; como de su implementaci&oacute;n; el desarrollo tendr&aacute; que realizarlo aquel programador que quiera utilizar la interfaz. Una de las caracter&iacute;sticas m&aacute;s fuertes de estas es que podemos pensarlas de tal forma que sean un molde para que quien las utilice les d&eacute; &eacute;l toque personal y trabajen seg&uacute;n el algoritmo o el programador que las implante, cabe se&ntilde;alar que si dos clases que no tienen nada que ver una con la otra pueden implantar la interfaz de forma distinta seg&uacute;n sea necesario.</P>
+<P>La declaraci&oacute;n de una  interface se lleva a cabo de la siguiente manera:</P>
+</FONT><B><FONT FACE="Garamond" COLOR="#0000ff">
+Acceso interface NombreInterface {<BR>
+<DIR>
+   Acceso Tipo VariableGlobal1;<BR>
+   Acceso Tipo VariavleGlobal2;<BR>
+   Acceso Tipo Metodo1( Argumentos );  // firma del M&eacute;todo1<BR>
+   Acceso Tipo Metodo2( Argumentos ); // firma del M&eacute;todo2<BR>
+</DIR>
+}<BR>
+</B></FONT><FONT FACE="Garamond"><P>De la declaraci&oacute;n anterior se puede observar que Acceso es de tipo <B>public</B> tanto para la interface como para las variables globales (que tambi&eacute;n son de tipo <B>final</B> y <B>static</B>) y para los m&eacute;todos que solo son las firmas de ellos (sin implementaci&oacute;n).</P>
+<P>Las clases que quieran implementar el uso de una interface deber&aacute;n utilizar la palabra clave <B>implements</B> de la siguiente forma:</P>
+</FONT><B><FONT FACE="Garamond" COLOR="#0000ff">
+class NombreDeClase implements NombreInterface {<BR>
+<DIR>
+   Tipo VariableInstancia1 = VariableGlobal1;<BR>
+   Tipo VariableInstancia2 = VariableGlobal2;<BR>
+   Public Tipo Metodo1( Argumentos )<BR>
+   {<BR>
+   // C&oacute;digo del m&eacute;todo 1  (implementaci&oacute;n)<BR>
+   }<BR>
+   Public Tipo Metodo2( Argumentos )<BR>
+   {<BR>
+   // C&oacute;digo del m&eacute;todo 2 (implementaci&oacute;n)<BR>
+   }<BR>
+</DIR>
+
+<P>}</P>
+</B></FONT><FONT FACE="Garamond"><P>Cuando se implanta la interfaz en cualquier clase, hay que implementar todos las firmas de ella, ya que de no hacerlo la clase se convierte en abstracta, tambi&eacute;n hay que recordar que todos los m&eacute;todos implementados en las clase deben tener acceso p&uacute;blico.</P>
+</FONT><B><FONT FACE="Garamond" SIZE=4 COLOR="#800080"><P>Desarrollo de la pr&aacute;ctica:</P>
+</B></FONT><FONT FACE="Garamond"><P>1.- Del siguiente c&oacute;digo, explique brevemente que hace y que ocurre cuando se ejecuta, investigue que m&eacute;todo de la interfaz se est&aacute; implementando aqu&iacute;. Ya sabe como trabaja un applet.</P>
+<P ALIGN="CENTER"><IMG SRC="pr61.jpg" WIDTH=419 HEIGHT=343></P>
+<P>2.- Del siguiente programa compile, ejecute y verifique su funcionamiento para realizar una interface con los m&eacute;todos Intercambiar(), GererarNumeroAleatorio(), Ordenar() y para que una clase implemente la interfaz, genere la clase correspondiente para trabajar con la funci&oacute;n principal.</P>
+</FONT><B><FONT FACE="Garamond" COLOR="#0000ff">
+class burbuja {<BR>
+<DIR>
+   public static void burbuja_sqrt( int arreglo[] )<BR>
+   {<BR>
+   <DIR>
+    int i = arreglo.length;<BR>
+    <BR>
+    while(--i&gt;=0 ) {<BR>
+    <DIR>
+        for( int j=0; j&lt;i; j++ ) {<BR>
+        <DIR>
+             if( arreglo[j]&gt;arreglo[j+1] ) {<BR>
+             <DIR>
+                 int tmp = arreglo[j];<BR>
+                 arreglo[j] = arreglo[j+1];<BR>
+                 arreglo[j+1] = tmp;<BR>
+             </DIR>  
+             }<BR>
+         </DIR>
+         }<BR>
+     </DIR>
+     }<BR>
+</DIR>
+   }<BR><BR>
+
+   public static void main( String args[] )<BR>
+   {<BR>
+   <DIR>     
+     int arreglo[] = new int[30];<BR>
+     <BR>
+     System.out.println( "Antes de ordenar" );<BR>
+     for( int i=0; i&lt;arreglo.length; i++ ) {<BR>
+     <DIR>
+        arreglo[i] = (int)( Math.random() * 30.0);<BR>
+        System.out.print( " " + arreglo[i] );<BR>
+        }<BR>
+     </DIR>
+      <BR>
+     burbuja_sqrt( arreglo );<BR>
+     <BR>
+     System.out.println( "Despues de ordenar" );<BR>
+     for( int i=0; i&lt;arreglo.length; i++ ) {<BR>
+     <DIR>         
+        System.out.print( " " + arreglo[i] );<BR>
+        }<BR>
+     </DIR>
+   </DIR>
+   }<BR>
+</DIR>
+}<BR><BR>
+</B></FONT><FONT FACE="Garamond"><P>3.- Para el siguiente programa haga un an&aacute;lisis de c&oacute;mo trabaja y cree los m&eacute;todos siguientes e incluya  en la interfaz del ejemplo anterior  estos. NOTA: Guarde los cambios en otro archivo de interfaz. Incluya un m&eacute;todo que obtenga el primero y &uacute;ltimo n&uacute;mero del arreglo y otro que realice el ordenamiento r&aacute;pido del mismo. Trabaje para generar la clase que implemente la interfaz y su correspondiente clase para la funci&oacute;n principal.</P>
+</FONT><B><FONT FACE="Garamond" COLOR="#0000ff">
+class ordenarapido {<BR>
+<DIR>   
+   static void quick_sort( int arr[], int inicio, int fin )<BR>
+   {<BR>
+   <DIR>     
+      int abajo = inicio;<BR>
+      int arriba = fin;<BR>
+      <BR>
+      if( inicio&gt;=fin ) return;<BR>
+      int enmedio = arr[(inicio+fin)/2];<BR>
+      do {<BR>
+      <DIR>
+         while( arr[abajo]&lt;enmedio ) abajo++;<BR>
+         while( arr[arriba]&gt;enmedio ) arriba--;<BR>
+         if( abajo&lt;= arriba ) {<BR>
+         <DIR>
+            int tmp = arr[abajo];<BR>
+            arr[abajo++] = arr[arriba];<BR>
+            arr[arriba--] = tmp;<BR>
+            }<BR>
+         </DIR> 
+      </DIR>
+      }while( abajo&lt;=arriba );<BR><BR>
+      quick_sort( arr, inicio, arriba );<BR>
+      quick_sort( arr, abajo, fin );<BR>
+   </DIR>
+   }<BR><BR>
+
+   public static void main( String args[] )<BR>
+   {<BR>
+   int arreglo[] = new int[30];<BR>
+   <BR>
+   System.out.println( "Antes de ordenar" );<BR>
+   for( int i=0; i&lt;arreglo.length; i++ ) {<BR>
+   <DIR>
+      arreglo[i] = (int)( Math.random() * 30.0);<BR>
+      System.out.print( " " + arreglo[i] );<BR>
+      }<BR><BR>
+   </DIR>
+   quick_sort( arreglo, 0, arreglo.length-1 );<BR><BR>
+   System.out.println( " " );<BR>
+   System.out.println( "Despues de ordenar" );<BR>
+   for( int i=0; i&lt;arreglo.length; i++ ) {<BR>
+   <DIR>
+      System.out.print( " " + arreglo[i] );<BR>
+      }<BR>
+   </DIR>
+   }<BR>
+</DIR>
+}<BR><BR>
+</B></FONT><FONT FACE="Garamond"><P>4.- Ordenamiento por selecci&oacute;n.</P>
+<P>Algoritmo: </P>
+<P><IMG SRC="Bullet1.gif" WIDTH=13 HEIGHT=13>&nbsp;Seleccione el elemento m&aacute;s peque&ntilde;o de la matriz (o arreglo) Arr[]. Intercambiarlo por el elemento Arr[0]. Ahora la entrada m&aacute;s peque&ntilde;a esta en la primera posici&oacute;n de la matriz.</P>
+<P><IMG SRC="Bullet1.gif" WIDTH=13 HEIGHT=13>&nbsp;Considere las posiciones de la matriz Arr[1], Arr[2], Arr[3], ........ Arr[n], seleccione el elemento m&aacute;s peque&ntilde;o e interc&aacute;mbielo por Arr[1],. Ahora las dos primeras entradas de la matriz est&aacute;n en orden.</P>
+<P><IMG SRC="Bullet1.gif" WIDTH=13 HEIGHT=13>&nbsp;Contin&uacute;e este proceso hasta el &uacute;ltimo elemento de la matriz (el mayor de todos los n&uacute;meros).</P>
+<P>En otro programa con la nueva interfaz ampliada incluya el m&eacute;todo correspondiente al ordenamiento por selecci&oacute;n y cree una aplicaci&oacute;n completa para su funcionamiento, analice que pasa con este ordenamiento.</P>
+<P>5.- Realice un peque&ntilde;o men&uacute; para realizar por entrada de teclado la selecci&oacute;n correspondiente del m&eacute;todo de ordenamiento y que el usuario introduzca tambi&eacute;n cuantos elementos desea ordenar.</P>
+<P>&nbsp;</P>
+</FONT><B><FONT FACE="Garamond" SIZE=4 COLOR="#800080"><P>Cuestionario.</P>
+</B></FONT><FONT FACE="Garamond" COLOR="#0000ff"><P>1.- Investigue un algoritmo de ordenaci&oacute;n por inserci&oacute;n y desarrolle la interfaz correspondiente para implementarlo y la aplicaci&oacute;n completa.</P>
+<P>2.- Introduzca los m&eacute;todos del punto anterior al programa desarrollado en el punto 5 y genere el programa completo.</P>
+<P>3.- Realice una interfaz diferente con los m&eacute;todos necesarios para medir el tiempo que se tarda en ordenar cada algoritmo e imprima en pantalla ese resultado. Realice este c&aacute;lculo por lo menos para 1000 elementos en la matriz.</P>
+<P>4.- Cuales fueron sus resultados del punto anterior com&eacute;ntelos detalladamente.</P>
+<P>5.- Si usted ha implementado en C o C++ ¿Podr&iacute;a dar su opini&oacute;n al respecto de que lenguaje trabaja m&aacute;s r&aacute;pido con estos algoritmos?</P>
+</FONT><FONT FACE="Garamond"><P ALIGN="CENTER"><IMG SRC="Image12.gif" WIDTH=536 HEIGHT=5></P>
+</FONT><B><FONT FACE="Arial" SIZE=2><P ALIGN="CENTER">P&aacute;gina relacionada 1 | P&aacute;gina relacionada 2 | P&aacute;gina relacionada 3</P></DIR>
+</B></FONT></BODY>
+</HTML>

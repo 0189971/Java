@@ -1,0 +1,224 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Practica%2012_archivos/filelist.xml">
+<title>Practica 12</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Rodolfo Romero Herrera</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Rodolfo Romero Herrera</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:Created>2001-05-08T19:00:00Z</o:Created>
+  <o:LastSaved>2001-05-08T19:00:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>431</o:Words>
+  <o:Characters>2459</o:Characters>
+  <o:Company>ESCOM</o:Company>
+  <o:Lines>20</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>3019</o:CharactersWithSpaces>
+  <o:Version>9.2812</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:DrawingGridHorizontalSpacing>3.9 pto</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>5.3 pto</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:18.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.9pt 3.0cm 70.9pt 3.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+<body  topmargin="0" marginheight="0" bgcolor="Cyan">
+
+
+<div class=Section1>
+
+<h1>Practica 12. Flujos de Archivos aleatorios</h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText><b><span style='font-size:14.0pt;mso-bidi-font-size:10.0pt'>Objetivo.<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='text-indent:35.4pt'><span style="mso-spacerun:
+yes"> </span>El alumno realizará programas que trabajen con archivos de acceso
+aleatorio. Para crear, escribir o leer datos. También observará las diferencias
+con respecto a los archivos de acceso secuencial, lo que le permitirá elegir el
+tipo de archivo a utilizar dependiendo de la aplicación.</p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText><b><span style='font-size:14.0pt;mso-bidi-font-size:10.0pt'>Introducción
+Teórica.<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText><span style='mso-tab-count:1'>            </span>Los
+objetos RandomAccessFile (archivo de acceso aleatorio) tienen todas las
+capacidades de los objetos DataInputStream y DataOutputStream. Cuando se asocia
+un flujo RandomAccesFile a un archivo, y todos los datos se leen o escriben a
+partir del punto en el archivo especificado por el apuntador de posición en el
+archivo, y todos los datos se leen o escriben como tipos de datos primitivos.
+Los programas de procesamiento de archivos de acceso aleatorio, casi nunca
+escriben un solo campo en un archivo. Lo normal es que escriban un objeto a la
+vez. </p>
+
+<p class=MsoBodyText><span style='mso-tab-count:1'>            </span>El método
+write (escribir) envía a la salida un registro de información del objeto
+RandomAccessFile que le pasa como argumento. El método resad (leer) introduce
+un registro de información del objeto RandomAccessFile que se pasa como
+argumento al método. </p>
+
+<p class=MsoBodyText><span style="mso-spacerun: yes">    </span><span
+style='mso-tab-count:1'>        </span>El siguiente segmento de programa se
+pasan dos argumentos al constructor RandommAccessFile : el nombre del archivo y
+el método de apertura del archivo. El modo de paertura para un RandomAccesFile
+es “r” si se desea abrir el archivo para lectura o bien “rw” si se desea abrir
+el archivo para lectura y escritura. Si ocurre un IOException<span
+style="mso-spacerun: yes">  </span>durante el proceso de apertura, el programa
+termirá. </p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText><span lang=EN-US style='mso-ansi-language:EN-US'>try{<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">      </span>file = new RandomAccesFile (
+“credit.dat”, “rw”);<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='mso-ansi-language:EN-US'>catch
+(IOException e) {<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span style="mso-spacerun: yes"> </span><span
+style='mso-tab-count:1'>            </span>System.err.println (“No se abrió
+bien el archivo\n” +</p>
+
+<p class=MsoBodyText><span style='mso-tab-count:2'>                        </span><span
+style='mso-tab-count:1'>            </span><span style='mso-tab-count:1'>            </span>e.tostring());</p>
+
+<p class=MsoBodyText><span style='mso-tab-count:1'>            </span>System.exit(1);</p>
+
+<p class=MsoBodyText>}</p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText><span style='mso-tab-count:1'>            </span>Una forma
+de determinar la posición exacta del archivo en la que está almecenado un
+registro de información es usar el método sep (buscar). El método seek
+establece el apuntador de posición en el archivo en una posición específica
+relativa al principio del archivo. </p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText><span style='mso-tab-count:1'>            </span>Para<span
+style="mso-spacerun: yes">  </span>guardar información se invoca el método
+addRecord (agregar registro) de la clase WirteRandFile (escribir archivo
+aleatorio) para obtener los datos de los campos de texto. Para terminar, el
+programa se llama al método cleanup de la clase Write.</p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText>Problemas:</p>
+
+<p class=MsoBodyText>1.- Crear un programa capaz de almacenar 100 registros de
+longitud fija para un zoológico que pueda tener hasta 100 animales. Cada
+registro debe consistir en un número de clasificación que se usará como clave
+de registro, y campos que indiquen: Clase, Infraclase, Orden, Familia, Especie,
+Otros Nombres. Recomendamos ver la página: </p>
+
+<p class=MsoBodyText><a href="http://orbita.starmedia.com/animalia">http://orbita.starmedia.com/animalia</a>.</p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText>2.- Haga un programa para generar un archivo de acceso
+aleatorio que administre la distribución de libros en una biblioteca. Con los
+siguientes campos: Clave del libro, nombre, autor, editorial. El programa debe
+permitir la búsqueda utilizando cualquiera de los campos.</p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText><span style="mso-spacerun: yes"> </span></p>
+
+
+<TABLE WIDTH=605 HEIGHT=80>
+<TR>
+<TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="unidad_VI.HTML"><IMG SRC="regresar.JPG" WIDTH=35 HEIGTH=30><BR>regresar</A></TD>
+<TD WIDTH=80></TD>
+<TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="contenido.HTML"><IMG SRC="salir.JPG" WIDTH=35 HEIGTH=30><BR>salir</A></TD>
+<TD WIDTH=80></TD>
+<TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="Practica_VII.HTML"><IMG SRC="continuar.JPG" WIDTH=35 HEIGTH=30><BR>continuar</A></TD>
+</TR>
+</TABLE>
+</div>
+
+</body>
+
+</html>

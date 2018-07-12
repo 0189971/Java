@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="org.edisoncor.gui.panel.PanelRect" name="panelRect1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Container class="org.edisoncor.gui.panel.PanelReflect" name="panelReflect1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Container class="org.edisoncor.gui.panel.PanelNice" name="panelNice1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+    </Container>
+    <Container class="org.edisoncor.gui.panel.PanelLlamada" name="panelLlamada1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Component class="org.edisoncor.gui.varios.BarraTitle" name="barraTitle1">
+    </Component>
+    <Component class="org.edisoncor.gui.list.cellRenderer.BasicCellRenderer" name="basicCellRenderer1">
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonAqua" name="buttonAqua1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="buttonAqua1"/>
+      </Properties>
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonCircle" name="buttonCircle1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="buttonCircle1"/>
+      </Properties>
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonIcon" name="buttonIcon1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="buttonIcon1"/>
+      </Properties>
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonIpod" name="buttonIpod1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="buttonIpod1"/>
+      </Properties>
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonNice" name="buttonNice1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="buttonNice1"/>
+      </Properties>
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonTask" name="buttonTask1">
+    </Component>
+    <Component class="org.edisoncor.gui.comboBox.ComboBoxRect" name="comboBoxRect1">
+    </Component>
+    <Component class="org.edisoncor.gui.util.BalloonManager" name="balloonManager1">
+    </Component>
+    <Component class="org.edisoncor.gui.list.cellRenderer.BasicCellRenderer" name="basicCellRenderer2">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="buttonAction2" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonAction1" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonAction3" min="-2" max="-2" attributes="0"/>
+                  <Component id="buttonAction4" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="86" max="32767" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="254" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+              <Component id="clockFace1" min="-2" pref="162" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="clockFace1" min="-2" pref="164" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="buttonAction1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              <Component id="buttonAction2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="buttonAction3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="buttonAction4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="org.edisoncor.gui.varios.ClockFace" name="clockFace1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+    <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="99" red="33" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Registro"/>
+        <Property name="colorDeSombra" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lista"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Modifica"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction3ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="24" style="0"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Club Juvenil San Francisco Tlaltenco"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\javis\Documents\NetBeansProjects\Registro\escudo.png"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pagos"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction4ActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>

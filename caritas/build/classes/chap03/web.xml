@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC 
+    "-//Sun Microsystems, Inc.//DTD Web Application2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app>
+    <display-name>WARExample</display-name>
+    <description>
+        Un esqueleto de aplicacion para demostrar archivos WAR
+    </description>
+    <servlet>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <servlet-class>chap03.HelloWorldServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JDBCServlet</servlet-name>
+        <servlet-class>chap03.JDBCServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultorGeneroServlet</servlet-name>
+        <servlet-class>chap03.ConsultorGeneroServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InsertorGeneroServlet</servlet-name>
+        <servlet-class>chap03.InsertorGeneroServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <url-pattern>/HelloWorldServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JDBCServlet</servlet-name>
+        <url-pattern>/JDBCServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultorGeneroServlet</servlet-name>
+        <url-pattern>/ConsultorGeneroServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InsertorGeneroServlet</servlet-name>
+        <url-pattern>/InsertorGeneroServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

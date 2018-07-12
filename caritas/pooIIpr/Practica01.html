@@ -1,0 +1,317 @@
+<html>
+<head>
+<title>Practica 1.- Applet muestra</title>
+<script language="JavaScript">
+var previous = "end";
+var next = "./cupojava/unix.html";
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
+<!--
+body {
+	background-color: #FFFF99;
+}
+-->
+</style></HEAD>
+<BODY background="">
+<FONT FACE="Verdana, Arial">
+<div id="texto" style="position:absolute; left:75 ; top:0">
+  <table width="800" border="1">
+    <tr>
+      <td><DIV ALIGN="LEFT">
+        <h2>Practica 1. Applet muestra</h2>
+      </div>
+        <a NAME="top"></a>
+        <h4>Objetivo</h4>
+        <P><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span>El alumno aprendera a utilzar las herramientas necesarias para la compilaci&oacute;n de una aplicaci&oacute;n. 
+        <h4>Introducci&oacute;n</h4>
+        <P><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Java es un lenguaje de programaci&oacute;n los programadores pueden crear programas (applet) para jecutarse en forma independiente o ligados a un programa de navegaci&oacute;n, o navegador bajo la web.</p>
+        <P><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Los applets son independientes de dispositivos, lo que significa que el mismo applet puede ejecutarse en un PC con Windows 2000, XP, o Macintosh o una m&aacute;quina UNIX. Java compila los applets en c&oacute;digo de m&aacute;quina virtual, que el navegador convierte en el c&oacute;digo binario que entiende el procesador.</P>
+        <h2>Desarrollo</h2>
+        <IMG SRC="desarrollo.gif" WIDTH="20" HEIGHT="23 " ALT="">
+        <table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH=100%>
+          <tr>
+            <td ROWSPAN="2"><FONT FACE="Verdana, Arial"> </font></td>
+            <td><font face="Verdana, Arial"><FONT FACE="Verdana, Arial">
+              <BLOCKQUOTE> <b><font color="#707070">El clasico Hola Mundo. Tu Primer Programa</font></b>
+                  <P> Las siguientes instrucciones te ayudar&aacute;n a escribir tu primer programa Java. 
+              </BLOCKQUOTE>
+            </font> </font></td>
+          </tr>
+        </table>
+        <table BORDER=0 CELLSPACING=0 CELLPADDING=10>
+          <tr>
+            <td VALIGN=TOP><FONT FACE="Verdana, Arial"><b><font color="#0000FF">1. </font></b><a href="#1">Material</a></font></td>
+            <td VALIGN=TOP><FONT FACE="Verdana, Arial"><b><font color="#FF0000">2. </font></b>Crear tu Primera Aplicaci&oacute;n <br>
+        &nbsp;<font size=-1>&nbsp;&nbsp;&nbsp; a. <a href="#2a">Crear un archivo Fuente Java</a></font> <br>
+        &nbsp;<font size=-1>&nbsp;&nbsp;&nbsp; b. <a href="#2b">Compilar el archivo Fuente</a></font> <br>
+        &nbsp;<font size=-1>&nbsp;&nbsp;&nbsp; c. <a href="#2c">Ejecutar el Programa</a></font></font></td>
+          </tr>
+          <tr>
+            <td VALIGN=TOP><FONT FACE="Verdana, Arial"><b><font color="#990099">3. </font></b><a href="#3">Crear Tu Primer Applet</a></font></td>
+          </tr>
+        </table>
+        <hr ALIGN=LEFT>
+        <br>
+        <h2><a NAME="1"></a><font color="#0000FF">1. </font>Material <IMG SRC="Taladro.gif" WIDTH="31" HEIGHT="35 " ALT=""></h2>
+        Para escribir tu primer programa, necesitar&aacute;s:
+        <ol>
+          <li><b>La Edici&oacute;n Est&aacute;ndard de la Plataforma Java 2<sup><font size=-2>TM</font></sup>.</b> Puedes <a href="http://java.sun.com/products/jdk/1.2/download-windows.html"><font color="#009bbb"><b>descargarla ahora</b></font></a> y consultar las <a href="http://java.sun.com/products/jdk/1.2/install-windows.html"><font color="#009bbb"><b>instrucciones de instalaci&oacute;n</b></font></a>.&nbsp;</li>
+          <li><b>Un Editor de texto.</b> En este ejemplo, usaremos el NotePad de Windows. Para encontrar NotePad desde le men&uacute; <font color="#990099">Inicio</font> selecciona <font color="#990099">Programas</font> > <font color="#990099">Accesorios</font> > <font color="#990099">NotePad</font>. Si usas un editor diferente no te ser&aacute; dificil adaptar estas instrucciones.&nbsp;</li>
+        </ol>
+        Estas dos cosas son todo lo que necesitas para programar en Java.
+        <p> <IMG SRC="10.gif" WIDTH="13" HEIGHT="16 " ALT=""><font size=-1><a href="#top">Subir</a></font> <br>
+        <hr ALIGN=LEFT WIDTH="70%">
+        <h2><a NAME="2a"></a><font color="#FF0000">a.</font>Crear un archivo Fuente Java.</h2>
+        <blockquote>
+          <p>Tienes dos opciones:
+          <ul>
+            <li>Puedes grabar el archivo <b><a href="../application/example/HelloWorldApp.java"><font color="#bb000f"><b>HelloWorldApp.java</b></font></a></b> en tu computadora y as&iacute; evitarte todo el tecleo. Luego puedes ir directo al <a href="#2b">paso b</a>.<br>
+            </li>
+            <li>O, puedes seguir est&aacute;s (largas) instrucciones:</li>
+          </ul>
+          <p><b><font color="#FF0000">1.</font></b>Arranca NotePad. En un nuevo documento, teclea el siguiente c&oacute;digo:
+          <table BORDER CELLSPACING=2 CELLPADDING=2 WIDTH=80% >
+            <tr>
+              <td WIDTH="100%"> <font color=009999 size=3>
+                <pre><b>/**
+&nbsp;* The HelloWorldApp class implements an application that
+&nbsp;* simply displays "Hello World!" to the standard output.
+&nbsp;*/
+class HelloWorldApp {
+&nbsp;&nbsp;&nbsp; public static void main(String[] args) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Display "Hello World!"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println("Hello World!");
+&nbsp;&nbsp;&nbsp; }
+}</b></pre>
+              </font> </td>
+            </tr>
+          </table>
+          <p>
+          <table BORDER CELLSPACING=0 CELLPADDING=10 WIDTH=80% >
+            <tr BGCOLOR="#FFFFCC">
+              <td BGCOLOR="#FFFFDB"><FONT FACE="Verdana, Arial">
+                <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=75% >
+                  <tr>
+                    <td WIDTH="77%"><FONT FACE="Verdana, Arial">&nbsp;<b><font color="#990000">Se cuidadoso cuando lo teclees</font></b></font></td>
+                    <td WIDTH="13%"> <IMG SRC="typeA.gif" WIDTH="30" HEIGHT="30 " ALT=""></td>
+                    <td WIDTH="10%"> <IMG SRC="typea2.gif" WIDTH="30" HEIGHT="30 " ALT=""></td>
+                  </tr>
+                </table>
+                <p> <font size=-1>Teclea todo el c&oacute;digo, comandos y nombres de archivos exactamente como los ves. El compilador y el int&eacute;rprete Java son <B>sensibles a las may&uacute;sculas</B>.</font>
+                <center>
+                  <p><b>HelloWorldApp <IMG SRC="notequal.gif" WIDTH="20" HEIGHT="19 " ALT="">&nbsp;helloworldapp</b>
+                </center>
+              </font></td>
+            </tr>
+          </table>
+          <p> <b><font color="#FF0000">2.</font> </b>Graba este c&oacute;digo en un archivo. Desde la barr&aacute; de men&uacute;, selecciona <font color="#990099">File</font> > <font color="#990099">Save As</font>. En le caja de di&aacute;lofo<font color="#990099">Save As</font>:&nbsp;
+          <ul>
+            <li>Usa el men&uacute; desplegable <font color="#990099">Save in</font>, para especificar el directorio (o carpeta) donde grabar&aacute;s el archivo. En este ejemplo, el es el directorio <b>java</b> en la unidad<b>C</b>.&nbsp;</li>
+            <li>En la caja de texto <font color="#990099">File name</font>, teclea, <b>"HelloWorldApp.java"</b>, incluyendo las comillas.</li>
+            <li>En el men&uacute; desplegable <font color="#990099">Save as type</font>, elige <font color="#990099">Text Document</font>.&nbsp;</li>
+          </ul>
+          <blockquote>Cuando hayas terminado la caja de di&aacute;logo se deber&iacute;a parecer a esto:
+              <p>
+                <center>
+                  <IMG SRC="saveas.gif" WIDTH="426" HEIGHT="165 " ALIGN="BOTTOM" NATURALSIZEFLAG="3" ALT="">
+                </center>
+                Ahora pulsa sobre <font color="#990099">Save</font>, y sal de NotePad.
+          </blockquote>
+        </blockquote>
+        <IMG SRC="arrow.gif" WIDTH="13" HEIGHT="16 " ALT=""><font size=-1><a href="#top">Subir</a></font> <br>
+        <hr ALIGN=LEFT WIDTH="70%">
+        <h2><a NAME="2b"></a><font color="#FF0000">b. </font>Compilar el archivo Fuente</h2>
+        <blockquote> Desde el men&uacute; <font color="#990099">Start</font>, selecciona la aplicaci&oacute;n <font color="#990099">MS-DOS Prompt</font> (Windows 95/98) o <font color="#990099">Command Prompt</font> (Windows NT). Cuando se lanze, se deber&iacute;a parecer a esto:
+            <p>
+              <center>
+                <IMG SRC="dos.gif" WIDTH="489" HEIGHT="120" ALIGN="BOTTOM" NATURALSIZEFLAG="3" ALT="">
+              </center>
+            <p> El prompt muestra tu directorio actual. Cuando salimos a una ventana del DOS en Windows 95/98, el directorio actual normalmente es <b>WINDOWS</b> en nuestra unidad <b>C</b> (como s eve arriba) o <b>WINNT</b> para Windows NT. Para compilar el archivo fuente, cambiamos al directorio en el que se encuentra el archivo. Por ejemplo, si nuestro directorio de c&oacute;digo fuente es <b>java</b> en la unidad <b>C</b>, deber&iacute;amos teclear el siguiente comando y pulsar <font color="#990099">Enter</font>:
+    
+        <blockquote>
+              <table BORDER CELLSPACING=2 CELLPADDING=0>
+                <tr>
+                  <td WIDTH="100%"><FONT FACE="Verdana, Arial"><b>&nbsp;cd c:\java&nbsp;</b></font></td>
+                </tr>
+              </table>
+          </blockquote>
+            <p> Ahora el prompt deber&iacute;a cambiar a <b>C:\java></b>.
+    
+        <blockquote>
+              <hr ALIGN=LEFT>
+              <b>Nota: </b>Para cambiar a un directorio en una unidad diferente, deberemos teclear un comando extra. <br>
+          &nbsp;
+              <table BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH=80% >
+                <tr>
+                  <td WIDTH="50%"> <IMG SRC="extrastep.gif" WIDTH="198" HEIGHT="68" ALT=""> </td>
+                  <td WIDTH="50%"><FONT FACE="Verdana, Arial"><font size=-1>Como se ve aqu&iacute;, para cambiar al directorio <b>java</b> en la unidad <b>D</b>, debemos reentrar en la unidad <b>d:</b></font></font></td>
+                </tr>
+              </table>
+              <hr ALIGN=LEFT>
+          </blockquote>
+            <p> Si tecleas <b>dir</b> en la l&iacute;nea de comandos, deber&iacute;as ver tu archivo.
+    
+        <p>
+              <center>
+                <IMG SRC="cd.gif" WIDTH="528" HEIGHT="260" ALIGN="BOTTOM" NATURALSIZEFLAG="3" ALT="">
+              </center>
+          <p> Ahora puedes compilar. En la l&iacute;nea de comandos, teclea el siguiente comando y pulsa <font color="#990099">Enter</font>:
+          <blockquote>
+              <table BORDER CELLSPACING=2 CELLPADDING=0>
+                <tr>
+                  <td WIDTH="100%"><FONT FACE="Verdana, Arial"><b>&nbsp;javac HelloWorldApp.java&nbsp;</b></font></td>
+                </tr>
+              </table>
+          </blockquote>
+            <p> Si el prompt reaparece sin mensajes de error, felicidades. Tu programa se ha compilado con &eacute;xito.
+            <p>
+            <table BORDER CELLSPACING=0 CELLPADDING=10 WIDTH=85%>
+              <tr BGCOLOR="#FFCCCC">
+                <td BGCOLOR="#FFDDDD"><FONT FACE="Verdana, Arial"><b><font color="#804000"><font size=+1>Explicaci&oacute;n de Error</font></font></b> <font size=-1>
+                  <p><b>Bad command or file name</b> <i>(Windows 95/98)</i>
+                  <p><b>El nombre especificado no es reconocido como un comando interno o externo, operable program or batch file</b> <i>(Windows NT)</i>
+                  <p>Si recibes este error, Windows no puede encontrar el compilador Java, <b>javac</b>.
+                  <p>Aqu&iacute; hay una forma de decirle a Windows d&oacute;node encontrar <b>javac</b>. Supongamos que has intalado el SDK de Java 2 en <b>C:\jdk1.2.2</b>. En el prompt deber&iacute;as tecelar el siguiente comando y pulsar <b>Enter</b>:&nbsp;
+                  <blockquote> <font color=009999 size=3>
+                    <pre><b>C:\jdk1.2.2\bin\javac HelloWorldApp.java</b></pre>
+                  </font> </blockquote>
+                  <b>Nota: </b>Si eliges esta opci&oacute;n, cada vez que compiles o ejecutes un programam tendr&aacute;s que preceder a tus comandos <b>javac</b> y <b>java</b> con <b>C:\jdk1.2.2\bin\</b>. Para evitar esto consulta la secci&oacute;n <i><a href="http://java.sun.com/products/jdk/1.2/install-windows.html#Environment"><font color="#009bbb"><b>Update the PATH variable</b></font></a> </i> en las instrucciones de instalaci&oacute;n. </font> </font></td>
+              </tr>
+            </table>
+            <p> El compilador ha generado un archivo de bytecodes Java, <b>HelloWorldApp.class</b>. En el prompt, teclea <b>dir</b> para ver el nuevo archivo que se ha generado:
+            <p>
+              <center>
+                <IMG SRC="dosclass.gif" WIDTH="532" HEIGHT="248" ALIGN="BOTTOM" NATURALSIZEFLAG="3" ALT="">
+              </center>
+              Ahora que tienen un archivo <b>.class</b>, puedes ejecutar tu programa.
+        </blockquote>
+        <IMG SRC="arrow.gif" WIDTH="13" HEIGHT="16 " ALT=""><font size=-1><a href="#top">subir</a></font> <br>
+        <hr ALIGN=LEFT WIDTH="70%">
+        <h2><a NAME="2c"></a><font color="#FF0000">c.</font>Ejecutar el Programa</h2>
+        <blockquote> En el mismo directorio teclea en el prompt:
+            <blockquote>
+              <table BORDER CELLSPACING=2 CELLPADDING=0>
+                <tr>
+                  <td WIDTH="100%"><FONT FACE="Verdana, Arial"><b>&nbsp;java HelloWorldApp&nbsp;</b></font></td>
+                </tr>
+              </table>
+            </blockquote>
+            Ahora deber&iacute;as ver:
+            <p>
+              <center>
+                <IMG SRC="dosresult.gif" WIDTH="484" HEIGHT="131" ALIGN="BOTTOM" NATURALSIZEFLAG="3" ALT="">
+              </center>
+              Felicidades!, tu programa funciona.
+    
+        <p>
+            <table BORDER CELLSPACING=0 CELLPADDING=10 WIDTH=85% >
+              <tr BGCOLOR="#FFCCCC">
+                <td BGCOLOR="#FFDDDD"><FONT FACE="Verdana, Arial"><a NAME="error"></a><b><font color="#804000"><font size=+1>Explicaci&oacute;n de Error</font></font></b> <font size=-1>
+                  <p><b>Exception in thread "main" java.lang.NoClassDefFoundError: HelloWorldApp</b>
+                  <p>Si recibes este error, <b>java</b> no puede encontrar tu archivo de bytecodes, <b>HelloWorldApp.class</b>.
+                  <p>Uno de los lugares donde <b>java</b> intenta buscar el archivo de bytecodes es el directorio actual. Por eso, si tu archivo de bytecodes est&aacute; en <b>C:\java</b>, deber&iacute;as cambiar a ese directorio como directorio actual. 
+                  <p>Si todav&iacute;a tienes problemas, podr&iacute;as tener que cambiar tu variables CLASSPATH. Para ver si es necesario, intenta seleccionar el casspath con el siguiente comando:
+                  <blockquote> <font color=009999 size=3>
+                    <pre><b>set CLASSPATH=</b></pre>
+                  </font> </blockquote>
+                  Ahora introduce de nuevo <b>java HelloWorldApp</b>. Si el programa funciona, tendr&aacute;s que cambiar tu variable CLASSPATH. Para m&aacute;s informaci&oacute;n, consulta la secci&oacute;n <i><a href="http://java.sun.com/products/jdk/1.2/install-windows.html#Classpath"><font color="#009bbb"><b>Check the CLASSPATH Variable</b></font></a> </i> en las instrucciones de instalaci&oacute;n. </font> </font></td>
+              </tr>
+            </table>
+        </blockquote>
+        <IMG SRC="arrow.gif" WIDTH="13" HEIGHT="16 " ALT=""><font size=-1><a href="#top">subir</a></font>
+        <hr ALIGN=LEFT>
+        <h2><a name="3"></a><font color="#990099">3.</font>Crear tu Primer Applet</h2>
+        <b>HelloWorldApp</b> es un ejemplo de una aplicaci&oacute;n Java, un programa solitario. Ahora crear&aacute;s un <B>applet</B> Java, llamado <b>HelloWorld</b>, que tambi&eacute;n muestra el salido "Hello world!". Sin embargo, al contrario que <b>HelloWorldApp</b>, el applet se ejecuta sobre un navegador compatible con Java, como HotJava, Netscape Navigator, o Microsoft Internet Explorer.
+        <p> Para crear este applet, debes realizar los mismos pasos b&aacute;sicos que antes: crear un archivo fuente Java; compilarlo y ejecutar el programa.
+        <hr align=LEFT width="70%">
+        <h2><font color="#990099"><a name="3a"></a>a. </font>Crear un archivo Fuente Java.</h2>
+        <blockquote> De nuevo, tienes dos opciones:
+            <ul>
+              <li>Puedes grabar los archivos <a href="../applet/example/HelloWorld.java"><font color="#bb000f"><b>HelloWorld.java</b></font></a> y <b><a href="../applet/example/Hello.html">Hello.html</a></b> en tu computadora y as&iacute; evitarte todo el tecleo. Luego puedes ir directo al <a href="#3b">paso b</a>.</li>
+              <li>O, puedes seguir estas instrucciones: </li>
+            </ul>
+            <p><b><font color="#990099">1.</font></b>Arranca NotePad y teclea el siguiente c&oacute;digo en un nuevo documento: 
+            <table border cellspacing=2 cellpadding=2 width=80%>
+              <tr>
+                <td width="100%"> <font color=009999 size=3>
+                  <pre><b>import java.applet.*;
+import java.awt.*;
+ 
+/**
+ * The HelloWorld class implements an applet that
+ * simply displays "Hello World!".
+ */
+public class HelloWorld extends Applet {
+    public void paint(Graphics g) {
+        // Display &quot;Hello World!&quot;
+        g.drawString("Hello world!", 50, 25);
+    }
+}
+</b></pre>
+                </font> </td>
+              </tr>
+            </table>
+            <p> Graba este c&oacute;digo en un archivo llamado <b>HelloWorld.java</b>.
+    
+        <p> <b><font color="#990099">2.</font> </b>Tambi&eacute;n necesitas un archivo HTML que acompa&ntilde;e a tu applet. Teclea el siguiente c&oacute;digo en nuevo documento del NotePad:
+          <table border cellspacing=2 cellpadding=2 width=80% >
+              <tr>
+                <td width="100%"> <font color=009999 size=3>
+                  <pre><b>&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;A Simple Program&lt;/TITLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+Here is the output of my program:
+&lt;APPLET CODE=&quot;HelloWorld.class&quot; WIDTH=150 HEIGHT=25&gt;
+&lt;/APPLET&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</b></pre>
+                </font> </td>
+              </tr>
+            </table>
+            <p> Graba este c&oacute;digo en un archivo llamado <b>Hello.html</b>.
+        </blockquote>
+        <hr align=LEFT width="70%">
+        <h2><a name="3b"></a><font color="#990099">b. </font>Compilar el C&oacute;digo Fuente.</h2>
+        <blockquote> En el prompt, teclea el siguiente comando y pulsa <font color="#990099">Return</font>:
+            <blockquote>
+              <table border cellspacing=2 cellpadding=0 >
+                <tr>
+                  <td width="100%"><FONT FACE="Verdana, Arial"><b>&nbsp;javac HelloWorld.java </b></font></td>
+                </tr>
+              </table>
+            </blockquote>
+            <p> El compilar deber&iacute;a generar el archivo de bytecodes Java, <b>HelloWorld.class</b>.
+        </blockquote>
+        <hr align=LEFT width="70%">
+        <h2><a name="3c"></a><font color="#990099">c. </font>Ejecutar el Programa.</h2>
+        <blockquote> Aunque puedes ver tu applet usando un navegado, podr&iacute;as encontrar m&aacute;s sencillo probarlos usando la aplicaci&oacute;n <b>appletviewer</b> que viene con la plataforma Java<sup><font size=-2>TM</font></sup> . Para ver el applet <b>HelloWorld</b> usando el <b>appletviewer</b>, teclea esto en la l&iacute;nea de comandos:
+            <blockquote>
+              <table border cellspacing=2 cellpadding=0>
+                <tr>
+                  <td width="100%"><FONT FACE="Verdana, Arial"><b>&nbsp;appletviewer Hello.html </b></font></td>
+                </tr>
+              </table>
+            </blockquote>
+            <p> Ahora deber&iacute;as ver: <IMG SRC="applet.gif" WIDTH="173" HEIGHT="116 " ALT="">
+            <p> Felicidades! tu applet funciona.
+        </blockquote>
+        <TABLE WIDTH=605 HEIGHT=80>
+          <TR>
+            <TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="unidad_I.HTML"><IMG SRC="regresar.JPG" WIDTH=35 HEIGTH=30><BR>
+              regresar</A></TD>
+            <TD WIDTH=80></TD>
+            <TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="contenido.HTML"><IMG SRC="salir.JPG" WIDTH=35 HEIGTH=30><BR>
+              salir</A></TD>
+            <TD WIDTH=80></TD>
+            <TD ALIGN=CENTER WIDTH=80 HEIGTH=80><A HREF="EjerciciosPrac1.HTML"><IMG SRC="continuar.JPG" WIDTH=35 HEIGTH=30><BR>
+              continuar</A></TD>
+          </TR>
+        </TABLE></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
